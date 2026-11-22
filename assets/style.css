@@ -53,3 +53,14 @@ background:linear-gradient(90deg,rgba(14,22,16,.88) 0%,rgba(14,22,16,.55) 38%,rg
 .whero .ytbtn{background:#ff0033;color:#fff;border:0}.whero .ytbtn:hover{background:#d4002b}
 
 .clsw{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:14px 0 0}.clsw .tab{padding:5px 14px;font-size:14px}
+
+/* guide */
+.gstep{margin:28px 0}.gstep h3{display:flex;align-items:center;gap:10px;margin:0 0 12px}
+.gno{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#e5322d;color:#fff;font:700 16px/1 sans-serif}
+.gimg{display:block;width:100%;max-width:900px;border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.15);margin:0 0 12px}
+.gmarks{padding-left:1.4em;max-width:900px}.gmarks li{margin:6px 0}.gnotes{max-width:900px;color:var(--mut,#666)}
+.ghint{position:fixed;z-index:9999;left:50%;transform:translateX(-50%);bottom:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;padding:12px 16px;border-radius:14px;background:#222;color:#fff;box-shadow:0 8px 30px rgba(0,0,0,.35);max-width:92vw}
+.ghint .gx{background:none;border:0;color:#bbb;cursor:pointer;font:inherit;text-decoration:underline}
+
+.whero .btn.ghost{color:#fff;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.7)}
+.whero .btn.ghost:hover{background:rgba(255,255,255,.28)}
