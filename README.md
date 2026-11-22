@@ -9,9 +9,7 @@
 - 새 시리즈: data/series.json 의 series[] 에 추가 (file 이 null 이면 "준비 중").
 
 ## 배포 (GitHub Pages)
-1. GitHub에서 저장소 <아이디>.github.io 생성(Public)
-2. 이 폴더 내용 업로드(git push 또는 웹에서 업로드)
-3. Settings > Pages > Branch main / root
+저장소 muungjoo-hash/kstorysong, main / root, 커스텀 도메인 kstorysong.com (CNAME 파일). 파일을 push 하면 자동 반영.
 
-## 로그인/댓글/게시판 (Firebase, 무료)
-assets/config.js 의 KSS_FIREBASE 에 Firebase 웹 앱 설정을 넣으면 활성화됩니다. Authentication > Google 사용, 승인된 도메인에 github.io 추가, Firestore 규칙은 로그인한 사용자만 쓰기.
+## 게시판/댓글 (Firebase Firestore, 무로그인 공개)
+assets/config.js 에 Firebase 웹 앱 설정이 들어 있습니다(프로젝트 kstorysong). 누구나 닉네임으로 글을 쓸 수 있고, 규칙은 글 생성만 허용(길이 제한, 수정/삭제 불가)입니다. 부적절한 글은 Firebase 콘솔 > Firestore > comments 에서 직접 삭제합니다.

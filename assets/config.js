@@ -1,4 +1,10 @@
-// Firebase 설정(콘솔에서 웹 앱 등록 후 값 입력). 비워두면 로그인/댓글/게시판은 "준비 중"으로 표시됩니다.
-window.KSS_FIREBASE = null;
-// 예: window.KSS_FIREBASE = {apiKey:"...",authDomain:"xxx.firebaseapp.com",projectId:"xxx",appId:"..."};
-window.KSS_ADMIN_EMAILS = []; // 관리자 구글 이메일
+// Firebase 설정 (공개용 웹 키: 보안은 Firestore 규칙으로 처리됨)
+window.KSS_FIREBASE = {
+  "apiKey": "AIzaSyDShd97wZ9p3_UhZHOZlcLoa_JgXLKTC00",
+  "authDomain": "kstorysong.firebaseapp.com",
+  "projectId": "kstorysong",
+  "storageBucket": "kstorysong.firebasestorage.app",
+  "messagingSenderId": "839915711187",
+  "appId": "1:839915711187:web:3b29b2a62d53adb1190226"
+};
+window.KSS_ADMIN_EMAILS = [];

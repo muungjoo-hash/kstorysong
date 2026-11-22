@@ -27,7 +27,7 @@ const nm=({ko:'닉네임',en:'Nickname',vn:'Biệt danh'})[L]||'Nickname';
 const wait=({ko:'잠시 후 다시 올려 주세요.',en:'Please wait a moment before posting again.',vn:'Vui lòng đợi một lát rồi đăng lại.'})[L];
 form.innerHTML='<input class="nick" maxlength="30" placeholder="'+nm+'" style="width:100%;max-width:260px;margin-bottom:8px;padding:8px;border:1px solid var(--line,#ccc);border-radius:8px;background:transparent;color:inherit"><textarea rows="3" maxlength="1000" placeholder="'+t('cmph')+'"></textarea><div class="row"><button class="btn small">'+t('send')+'</button></div>';
 const nick=form.querySelector('.nick');nick.value=localStorage.kssNick||'';
-const load=async()=>{const s=await fb.db.collection('comments').where('key','==',key).orderBy('ts','desc').limit(100).get().catch(e=>({docs:[],err:e}));
+const load=async()=>{const s=await fb.db.collection('comments').where('key','==',key).limit(300).get().catch(e=>({docs:[],err:e}));if(s.docs)s.docs.sort((a,b)=>b.data().ts-a.data().ts);
 list.innerHTML=s.docs.map(d=>{const c=d.data();return '<div class="post"><b>'+esc(c.name||'guest')+'</b> <span class="mut">'+new Date(c.ts).toLocaleDateString()+'</span><div>'+esc(c.text)+'</div></div>'}).join('')||'<p class="mut">'+t('none')+'</p>'};
 form.querySelector('button').onclick=async()=>{const x=form.querySelector('textarea').value.trim();if(!x)return;
 if(Date.now()-(+localStorage.kssLastPost||0)<20000)return alert(wait);
