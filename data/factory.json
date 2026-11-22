@@ -1,0 +1,1529 @@
+{
+ "departments": [
+  {
+   "from": 1,
+   "to": 6,
+   "ko": "사무실",
+   "en": "Office",
+   "vn": "Văn phòng"
+  },
+  {
+   "from": 7,
+   "to": 10,
+   "ko": "QC",
+   "en": "QC",
+   "vn": "QC"
+  },
+  {
+   "from": 11,
+   "to": 15,
+   "ko": "창고",
+   "en": "Warehouse",
+   "vn": "Kho"
+  },
+  {
+   "from": 16,
+   "to": 19,
+   "ko": "재단",
+   "en": "Cutting",
+   "vn": "Cắt"
+  },
+  {
+   "from": 20,
+   "to": 27,
+   "ko": "재봉",
+   "en": "Sewing",
+   "vn": "Chuyền may"
+  },
+  {
+   "from": 28,
+   "to": 29,
+   "ko": "다림질",
+   "en": "Ironing",
+   "vn": "Là ủi"
+  },
+  {
+   "from": 30,
+   "to": 32,
+   "ko": "검침",
+   "en": "Needle detection",
+   "vn": "Kiểm kim"
+  },
+  {
+   "from": 33,
+   "to": 38,
+   "ko": "포장",
+   "en": "Packing",
+   "vn": "Đóng gói"
+  },
+  {
+   "from": 39,
+   "to": 40,
+   "ko": "통계",
+   "en": "Statistics",
+   "vn": "Thống kê"
+  },
+  {
+   "from": 41,
+   "to": 42,
+   "ko": "바늘",
+   "en": "Needles",
+   "vn": "Kim"
+  },
+  {
+   "from": 43,
+   "to": 44,
+   "ko": "정비",
+   "en": "Mechanics",
+   "vn": "Thợ máy"
+  },
+  {
+   "from": 45,
+   "to": 47,
+   "ko": "얼룩",
+   "en": "Stain",
+   "vn": "Tẩy vết bẩn"
+  },
+  {
+   "from": 48,
+   "to": 52,
+   "ko": "자수",
+   "en": "Embroidery",
+   "vn": "Thêu"
+  },
+  {
+   "from": 53,
+   "to": 56,
+   "ko": "워싱",
+   "en": "Washing",
+   "vn": "Giặt"
+  }
+ ],
+ "episodes": [
+  {
+   "no": 0,
+   "id": "intro",
+   "title": {
+    "ko": "코스 소개",
+    "en": "Course Guide",
+    "vn": "Giới thiệu khóa học"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "jChsDtT6w60",
+     "vn": "1kYbU0_ufiU"
+    }
+   },
+   "lesson": {
+    "en": null,
+    "vn": null
+   },
+   "audiobook": null,
+   "intro": true
+  },
+  {
+   "no": 1,
+   "id": "p2-01",
+   "dept": "사무실",
+   "title": {
+    "ko": null,
+    "en": "Office: Attendance Report",
+    "vn": "Văn phòng: Báo cáo chuyên cần"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "0uMfMr8lP84",
+     "vn": "mYJ73f7WRtc"
+    },
+    "song": {
+     "en": "_v5OApPSTGU",
+     "vn": "w5O-MC9OlKs"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-01_EN.html",
+    "vn": "lessons/factory/p2-01_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 2,
+   "id": "p2-02",
+   "dept": "사무실",
+   "title": {
+    "ko": null,
+    "en": "Office: Incoming Trims 1",
+    "vn": "Văn phòng: Kiểm tra nhập phụ liệu 1"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "ZtRKEJ50FiI",
+     "vn": "-q6LqnwJ6vE"
+    },
+    "song": {
+     "en": "0hSZQg7HScM",
+     "vn": "YGBUZFN2wA0"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-02_EN.html",
+    "vn": "lessons/factory/p2-02_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 3,
+   "id": "p2-03",
+   "dept": "사무실",
+   "title": {
+    "ko": null,
+    "en": "Office: Incoming Trims 2",
+    "vn": "Văn phòng: Kiểm tra nhập phụ liệu 2"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "1CCdTJv3s8U",
+     "vn": "RuG4Xmq5-qE"
+    },
+    "song": {
+     "en": "7_XoUj1_E6s",
+     "vn": "or73JtBLQ4I"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-03_EN.html",
+    "vn": "lessons/factory/p2-03_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 4,
+   "id": "p2-04",
+   "dept": "사무실",
+   "title": {
+    "ko": null,
+    "en": "Office: Production Report",
+    "vn": "Văn phòng: Kiểm tra báo cáo sản xuất"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "5Ab-4Jtgt2Y",
+     "vn": "MQbPaFm86uo"
+    },
+    "song": {
+     "en": "Vth_mjnjBZk",
+     "vn": "k-ugicA1DPY"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-04_EN.html",
+    "vn": "lessons/factory/p2-04_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 5,
+   "id": "p2-05",
+   "dept": "사무실",
+   "title": {
+    "ko": "사무실에서 부탁하기",
+    "en": "Office: Making Requests",
+    "vn": "Văn phòng: Nhờ vả trong văn phòng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "Jr5PzxVZvus",
+     "vn": "tg384Vs2YiM"
+    },
+    "song": {
+     "en": "4-u_egArPcY",
+     "vn": "OAuhy5LssVU"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-05_EN.html",
+    "vn": "lessons/factory/p2-05_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 6,
+   "id": "p2-06",
+   "dept": "사무실",
+   "title": {
+    "ko": "사무실 물품 단어",
+    "en": "Office: Supply Vocabulary",
+    "vn": "Văn phòng: Từ vựng đồ dùng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "i_EOzxDRx9E",
+     "vn": "s738UAwgoRo"
+    },
+    "song": {
+     "en": "98VlU_LwajM",
+     "vn": "vP0wAD0Tqj0"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-06_EN.html",
+    "vn": "lessons/factory/p2-06_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 7,
+   "id": "p2-07",
+   "dept": "QC",
+   "title": {
+    "ko": "검사반 검사 배정과 출결",
+    "en": "QC: Assignment & Attendance",
+    "vn": "QC: Phân công & chuyên cần"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "_4tZoRgoiMs",
+     "vn": "sq7RclJ63Io"
+    },
+    "song": {
+     "en": "k-HgdDkB5j8",
+     "vn": "xij4zqveDo8"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-07_EN.html",
+    "vn": "lessons/factory/p2-07_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 8,
+   "id": "p2-08",
+   "dept": "QC",
+   "title": {
+    "ko": "검사반 샘플과 부족 수량",
+    "en": "QC: Samples & Shortages",
+    "vn": "Kiểm hàng QC: Mẫu & số lượng thiếu"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "5JqyoUjKHbc",
+     "vn": "wVAKLCge3lo"
+    },
+    "song": {
+     "en": "pOl-7T5IA6w",
+     "vn": "AWF2uEpoT_s"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-08_EN.html",
+    "vn": "lessons/factory/p2-08_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 9,
+   "id": "p2-09",
+   "dept": "QC",
+   "title": {
+    "ko": "라벨 확인과 이색",
+    "en": "QC: Labels & Color Shade",
+    "vn": "Kiểm hàng QC: Nhãn & khác màu"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "BwTOCC05klo",
+     "vn": "FipTAP_xOZY"
+    },
+    "song": {
+     "en": "JhF6Lc8s_HQ",
+     "vn": "BZCFmUwV1NQ"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-09_EN.html",
+    "vn": "lessons/factory/p2-09_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 10,
+   "id": "p2-10",
+   "dept": "QC",
+   "title": {
+    "ko": "검사반 자주 쓰는 문장",
+    "en": "QC: Common Phrases",
+    "vn": "Kiểm hàng QC: Câu thường dùng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "CjeNPahhtRA",
+     "vn": "GUAYull-DeE"
+    },
+    "song": {
+     "en": "6XfdhiGAQbs",
+     "vn": "6jYs3FXn7gE"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-10_EN.html",
+    "vn": "lessons/factory/p2-10_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 11,
+   "id": "p2-11",
+   "dept": "창고",
+   "title": {
+    "ko": "창고 원단 입고",
+    "en": "Warehouse: Incoming Fabric",
+    "vn": "Kho: Vải về theo container"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "Pr_QX4smzlk",
+     "vn": "bRDvVn275EI"
+    },
+    "song": {
+     "en": "x0wPiRZfSMA",
+     "vn": "2J_R44U9TOk"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-11_EN.html",
+    "vn": "lessons/factory/p2-11_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 12,
+   "id": "p2-12",
+   "dept": "창고",
+   "title": {
+    "ko": "창고 입고 수량 확인과 보관",
+    "en": "Warehouse: Quantity & Storage",
+    "vn": "Kho: Số lượng nhập & chỗ chất"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "Fstz5BaIvuY",
+     "vn": "WiE-GzRg0U4"
+    },
+    "song": {
+     "en": "p9gEU0JIW2g",
+     "vn": "SY8_8t3QK0Q"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-12_EN.html",
+    "vn": "lessons/factory/p2-12_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 13,
+   "id": "p2-13",
+   "dept": "창고",
+   "title": {
+    "ko": "창고 창고 일 나누기",
+    "en": "Warehouse: Dividing Work",
+    "vn": "Kho: Chia việc trong kho"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "xrxwNOnZzy0",
+     "vn": "sGo12UJvltk"
+    },
+    "song": {
+     "en": "x_lVd7Bg70k",
+     "vn": "yKely30d7UU"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-13_EN.html",
+    "vn": "lessons/factory/p2-13_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 14,
+   "id": "p2-14",
+   "dept": "창고",
+   "title": {
+    "ko": "창고 원단 요청과 재고",
+    "en": "Warehouse: Fabric Requests & Stock",
+    "vn": "Kho: Xin vải & tồn kho"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "QtzpNY0XdvY",
+     "vn": "RHdl7l4ZgI8"
+    },
+    "song": {
+     "en": "1CtiOTxpg9I",
+     "vn": "Srkzvjk9EqM"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-14_EN.html",
+    "vn": "lessons/factory/p2-14_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 15,
+   "id": "p2-15",
+   "dept": "창고",
+   "title": {
+    "ko": "창고 입고·출고 일정",
+    "en": "Warehouse: In & Out Schedule",
+    "vn": "Kho: Lịch nhập – xuất"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "5SO37poK6Vw",
+     "vn": "sd7WlYPQAEA"
+    },
+    "song": {
+     "en": "cCHW4ogECtc",
+     "vn": "qZrdjdWuZc4"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-15_EN.html",
+    "vn": "lessons/factory/p2-15_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 16,
+   "id": "p2-16",
+   "dept": "재단",
+   "title": {
+    "ko": "재단 출결과 연단",
+    "en": "Cutting: Attendance & Spreading",
+    "vn": "Tổ cắt: Chuyên cần & trải vải"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "4byOLSrE6ws",
+     "vn": "lMlT1Or1pOw"
+    },
+    "song": {
+     "en": "vYSIqJzHdFM",
+     "vn": "mlg56tX1gKA"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-16_EN.html",
+    "vn": "lessons/factory/p2-16_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 17,
+   "id": "p2-17",
+   "dept": "재단",
+   "title": {
+    "ko": "재단 재단물 불량과 자수 확인",
+    "en": "Cutting: Defects & Embroidery Check",
+    "vn": "Tổ cắt: Lỗi hàng cắt & thêu"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "fyj4nBlMZSQ",
+     "vn": "ueMq8OUipQA"
+    },
+    "song": {
+     "en": "h_xOuImwegE",
+     "vn": "Vze1tlV4LKQ"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-17_EN.html",
+    "vn": "lessons/factory/p2-17_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 18,
+   "id": "p2-18",
+   "dept": "재단",
+   "title": {
+    "ko": "재단 재단물 투입",
+    "en": "Cutting: Sending to the Lines",
+    "vn": "Tổ cắt: Giao hàng cắt cho chuyền"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "PTimUpMF-_Q",
+     "vn": "AJhzl3P7pqY"
+    },
+    "song": {
+     "en": "QmwVXEEGZPI",
+     "vn": "rSksfOIaS1w"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-18_EN.html",
+    "vn": "lessons/factory/p2-18_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 19,
+   "id": "p2-19",
+   "dept": "재단",
+   "title": {
+    "ko": "재단 자주 쓰는 문장",
+    "en": "Cutting: Common Phrases",
+    "vn": "Tổ cắt: Câu thường dùng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "go0xk08ww-A",
+     "vn": "mScv64o4xa0"
+    },
+    "song": {
+     "en": "lbM5KoHzqhE",
+     "vn": "6XYANVdgs54"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-19_EN.html",
+    "vn": "lessons/factory/p2-19_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 20,
+   "id": "p2-20",
+   "dept": "재봉",
+   "title": {
+    "ko": "봉제 출근 안 한 직원",
+    "en": "Sewing: Absent Worker",
+    "vn": "Tổ may: Công nhân nghỉ làm"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "hEq4KCzVdJU",
+     "vn": "vOVDdz_UGpQ"
+    },
+    "song": {
+     "en": "yhC0Ng6Fpnc",
+     "vn": "PPhaM4ll1Ho"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-20_EN.html",
+    "vn": "lessons/factory/p2-20_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 21,
+   "id": "p2-21",
+   "dept": "재봉",
+   "title": {
+    "ko": "봉제 기계 배치",
+    "en": "Sewing: Machine Layout",
+    "vn": "Tổ may: Bố trí máy"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "i0MsQHP3Ems",
+     "vn": "XbxpLKEcj64"
+    },
+    "song": {
+     "en": "Ih2GYdckTfU",
+     "vn": "wDDJcy_W8kw"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-21_EN.html",
+    "vn": "lessons/factory/p2-21_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 22,
+   "id": "p2-22",
+   "dept": "재봉",
+   "title": {
+    "ko": "봉제 작업 중 이색 발견",
+    "en": "Sewing: Finding a Shade Difference",
+    "vn": "Tổ may: Phát hiện khác màu"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "22J6odO-FQg",
+     "vn": "M1i8F2YMR74"
+    },
+    "song": {
+     "en": "Ugy0_MCmNks",
+     "vn": "udmSwObtIz4"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-22_EN.html",
+    "vn": "lessons/factory/p2-22_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 23,
+   "id": "p2-23",
+   "dept": "재봉",
+   "title": {
+    "ko": "봉제 조장과 미싱사",
+    "en": "Sewing: Leader & Operators",
+    "vn": "Tổ may: Tổ trưởng & công nhân"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "azUwBriryKk",
+     "vn": "oQulE9UDdAo"
+    },
+    "song": {
+     "en": "wdHYr83T2RI",
+     "vn": "Q4IQPMs0gC0"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-23_EN.html",
+    "vn": "lessons/factory/p2-23_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 24,
+   "id": "p2-24",
+   "dept": "재봉",
+   "title": {
+    "ko": "봉제 기본 표현",
+    "en": "Sewing: Basic Phrases",
+    "vn": "Tổ may: Câu cơ bản"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "uBVs_YYnrrc",
+     "vn": "ocMcte-X8x0"
+    },
+    "song": {
+     "en": "yBxbQECnvVQ",
+     "vn": "RF6KQiIHA-4"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-24_EN.html",
+    "vn": "lessons/factory/p2-24_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 25,
+   "id": "p2-25",
+   "dept": "재봉",
+   "title": {
+    "ko": "봉제 옷 부위와 불량 단어",
+    "en": "Sewing: Garment Parts & Defects",
+    "vn": "Tổ may: Bộ phận áo & lỗi"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "lee7CjsN7Bk",
+     "vn": "XntSc0lcDcw"
+    },
+    "song": {
+     "en": "tVYxk6-UgDU",
+     "vn": "dsU5YYLEpMY"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-25_EN.html",
+    "vn": "lessons/factory/p2-25_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 26,
+   "id": "p2-26",
+   "dept": "재봉",
+   "title": {
+    "ko": "봉제 옷 종류와 상태 표현",
+    "en": "Sewing: Garment Types & Conditions",
+    "vn": "Tổ may: Loại áo & tình trạng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "JgmTmNnUpaE",
+     "vn": "ZuZloH-JOFk"
+    },
+    "song": {
+     "en": "Dx01SFV6404",
+     "vn": "HJy9G94tBug"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-26_EN.html",
+    "vn": "lessons/factory/p2-26_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 27,
+   "id": "p2-27",
+   "dept": "재봉",
+   "title": {
+    "ko": "봉제 작업 지시 단어",
+    "en": "Sewing: Instruction Words",
+    "vn": "Tổ may: Từ chỉ thị khi may"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "lT-Oj7UWS5s",
+     "vn": "RWy3h7RgU5Q"
+    },
+    "song": {
+     "en": "CucNc15n8JY",
+     "vn": "bzz2thKkSpE"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-27_EN.html",
+    "vn": "lessons/factory/p2-27_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 28,
+   "id": "p2-28",
+   "dept": "다림질",
+   "title": {
+    "ko": "아이롱 작업 지시",
+    "en": "Ironing: Work Instructions",
+    "vn": "Tổ ủi: Chỉ thị công việc"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "OMirHz9Dvss",
+     "vn": "rpXnOEbfgiM"
+    },
+    "song": {
+     "en": "sR2bszfkEV0",
+     "vn": "g__9Kodx_PA"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-28_EN.html",
+    "vn": "lessons/factory/p2-28_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 29,
+   "id": "p2-29",
+   "dept": "다림질",
+   "title": {
+    "ko": "아이롱 수량과 잔업",
+    "en": "Ironing: Quantity & Overtime",
+    "vn": "Tổ ủi: Số lượng & tăng ca"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "KiC_Ff3cSPg",
+     "vn": "W1i1D8uqSLY"
+    },
+    "song": {
+     "en": "jgJDSWZKxjY",
+     "vn": "0ba5SlTIBJQ"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-29_EN.html",
+    "vn": "lessons/factory/p2-29_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 30,
+   "id": "p2-30",
+   "dept": "검침",
+   "title": {
+    "ko": "검침 검침기 테스트",
+    "en": "Needle Check: Testing the Detector",
+    "vn": "Kiểm kim: Test máy dò kim"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "njznp4LP8u4",
+     "vn": "9NmRzeKF-UY"
+    },
+    "song": {
+     "en": "WfdGW6QtqAY",
+     "vn": "RnphjbndE30"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-30_EN.html",
+    "vn": "lessons/factory/p2-30_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 31,
+   "id": "p2-31",
+   "dept": "검침",
+   "title": {
+    "ko": "검침 바늘 조각 관리",
+    "en": "Needle Check: Broken Needle Pieces",
+    "vn": "Kiểm kim: Quản lý mảnh kim"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "FwgBfcvdvvU",
+     "vn": "cnNSeNPtI_E"
+    },
+    "song": {
+     "en": "At9xCi8wIL8",
+     "vn": "6Ijk-WksOGE"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-31_EN.html",
+    "vn": "lessons/factory/p2-31_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 32,
+   "id": "p2-32",
+   "dept": "검침",
+   "title": {
+    "ko": "검침 손님의 질문",
+    "en": "Needle Check: Customer Questions",
+    "vn": "Kiểm kim: Câu hỏi của khách"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "4ZBAx33oUKg",
+     "vn": "4I8CI-irPAo"
+    },
+    "song": {
+     "en": "ASgQaVWd2gU",
+     "vn": "96004cSTa98"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-32_EN.html",
+    "vn": "lessons/factory/p2-32_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 33,
+   "id": "p2-33",
+   "dept": "포장",
+   "title": {
+    "ko": "포장 출고 준비 수량",
+    "en": "Packing: Quantity Ready to Ship",
+    "vn": "Đóng gói: Số lượng chuẩn bị xuất"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "PPpusLQmDO4",
+     "vn": "bWXQPjiIj7g"
+    },
+    "song": {
+     "en": "COePoKxws2s",
+     "vn": "eZ3QO-EOvL4"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-33_EN.html",
+    "vn": "lessons/factory/p2-33_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 34,
+   "id": "p2-34",
+   "dept": "포장",
+   "title": {
+    "ko": "포장 폴리백·박스 작업 지시",
+    "en": "Packing: Bag & Box Instructions",
+    "vn": "Đóng gói: Chỉ thị vô bao"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "PXxPUhvxKLA",
+     "vn": "5I8cntT8ZKw"
+    },
+    "song": {
+     "en": "yI05t6-anlM",
+     "vn": "VKYsZtf0pPc"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-34_EN.html",
+    "vn": "lessons/factory/p2-34_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 35,
+   "id": "p2-35",
+   "dept": "포장",
+   "title": {
+    "ko": "포장 조장과 포장 직원",
+    "en": "Packing: Leader & Workers",
+    "vn": "Đóng gói: Tổ trưởng & công nhân"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "IS-BhehKqNk",
+     "vn": "9DPRsgbU3bs"
+    },
+    "song": {
+     "en": "4Tcm68pCbhE",
+     "vn": "IV5fJECQUJQ"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-35_EN.html",
+    "vn": "lessons/factory/p2-35_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 36,
+   "id": "p2-36",
+   "dept": "포장",
+   "title": {
+    "ko": "포장 자주 쓰는 문장",
+    "en": "Packing: Common Phrases",
+    "vn": "Đóng gói: Câu thường dùng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "mY_VR0RaZ_c",
+     "vn": "414M2-fAu3k"
+    },
+    "song": {
+     "en": "RPTDeV1j0h0",
+     "vn": "qw3CYDyvLmw"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-36_EN.html",
+    "vn": "lessons/factory/p2-36_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 37,
+   "id": "p2-37",
+   "dept": "포장",
+   "title": {
+    "ko": "포장 작업 동사",
+    "en": "Packing: Work Verbs",
+    "vn": "Đóng gói: Động từ công việc"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "1ND7cH3wpYg",
+     "vn": "05eDS8mrvPY"
+    },
+    "song": {
+     "en": "1B0Fv9lAVmY",
+     "vn": "FfXlLBXp6yk"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-37_EN.html",
+    "vn": "lessons/factory/p2-37_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 38,
+   "id": "p2-38",
+   "dept": "포장",
+   "title": {
+    "ko": "포장 물품 단어",
+    "en": "Packing: Supplies Vocabulary",
+    "vn": "Đóng gói: Từ vựng vật dụng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "-dYSj-su8XI",
+     "vn": "tfGpziaxnes"
+    },
+    "song": {
+     "en": "DdZ0KNGbjcs",
+     "vn": "Kci-gMkoIKw"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-38_EN.html",
+    "vn": "lessons/factory/p2-38_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 39,
+   "id": "p2-39",
+   "dept": "통계",
+   "title": {
+    "ko": "계수 생산 수량 확인",
+    "en": "Statistics: Checking Output",
+    "vn": "Thống kê: Kiểm tra sản lượng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "XHltldmVnG8",
+     "vn": "3vkzfgpWcNE"
+    },
+    "song": {
+     "en": "HmxQA5E9OTc",
+     "vn": "BmKGHWn_oP4"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-39_EN.html",
+    "vn": "lessons/factory/p2-39_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 40,
+   "id": "p2-40",
+   "dept": "통계",
+   "title": {
+    "ko": "계수 부탁 문장과 단어",
+    "en": "Statistics: Requests & Vocabulary",
+    "vn": "Thống kê: Câu nhờ vả & từ vựng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "GDcBMRYFzIQ",
+     "vn": "LeeZqZkIk2I"
+    },
+    "song": {
+     "en": "DPkN2irKnII",
+     "vn": "I5QnSWpHiMw"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-40_EN.html",
+    "vn": "lessons/factory/p2-40_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 41,
+   "id": "p2-41",
+   "dept": "바늘",
+   "title": {
+    "ko": "바늘관리 바늘이 떨어졌어요",
+    "en": "Needle Control: We Ran Out of Needles",
+    "vn": "Quản lý kim: Hết kim rồi"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "YQo4w1JvqZQ",
+     "vn": "evP2X50jVB8"
+    },
+    "song": {
+     "en": "A5E0yFSDPYc",
+     "vn": "TxkM_gAJ2TI"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-41_EN.html",
+    "vn": "lessons/factory/p2-41_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 42,
+   "id": "p2-42",
+   "dept": "바늘",
+   "title": {
+    "ko": "바늘관리 바늘 교환",
+    "en": "Needle Control: Changing Needles",
+    "vn": "Quản lý kim: Đổi kim"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "yE-Kf6VcQbQ",
+     "vn": "C385UApGIa8"
+    },
+    "song": {
+     "en": "BHfai-S35k0",
+     "vn": "_io0yVt90u8"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-42_EN.html",
+    "vn": "lessons/factory/p2-42_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 43,
+   "id": "p2-43",
+   "dept": "정비",
+   "title": {
+    "ko": "기사실 기사 조장과 반장",
+    "en": "Mechanics: Leader & Supervisor",
+    "vn": "Thợ máy: Tổ trưởng & quản đốc"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "JKiZ718WNCg",
+     "vn": "S4Z0HDImSYE"
+    },
+    "song": {
+     "en": "vJQ9F6gNiwQ",
+     "vn": "L1v27gBB53U"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-43_EN.html",
+    "vn": "lessons/factory/p2-43_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 44,
+   "id": "p2-44",
+   "dept": "정비",
+   "title": {
+    "ko": "기사실 미싱 고장",
+    "en": "Mechanics: A Broken Machine",
+    "vn": "Thợ máy: Máy may bị hỏng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "fD1CYF3W3Ss",
+     "vn": "mUCL58vYkPQ"
+    },
+    "song": {
+     "en": "FzPyRYsFLkU",
+     "vn": "9rZa_URe6TY"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-44_EN.html",
+    "vn": "lessons/factory/p2-44_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 45,
+   "id": "p2-45",
+   "dept": "얼룩",
+   "title": {
+    "ko": "오염제거 오염제거 확인",
+    "en": "Stain Removal: Checking the Work",
+    "vn": "Phòng tẩy: Kiểm tra tẩy vết bẩn"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "wt9EE2bi4dI",
+     "vn": "ihWpJOE0-es"
+    },
+    "song": {
+     "en": "8pVc42Fj1MI",
+     "vn": "64DwqTyDukc"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-45_EN.html",
+    "vn": "lessons/factory/p2-45_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 46,
+   "id": "p2-46",
+   "dept": "얼룩",
+   "title": {
+    "ko": "오염제거 자주 쓰는 문장",
+    "en": "Stain Removal: Common Phrases",
+    "vn": "Phòng tẩy: Câu thường dùng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "jFgl0QPjIEo",
+     "vn": "DNsqpOdIric"
+    },
+    "song": {
+     "en": "ao6OPuB615E",
+     "vn": "103aZSdTekY"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-46_EN.html",
+    "vn": "lessons/factory/p2-46_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 47,
+   "id": "p2-47",
+   "dept": "얼룩",
+   "title": {
+    "ko": "오염제거 단어",
+    "en": "Stain Removal: Vocabulary",
+    "vn": "Phòng tẩy: Từ vựng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "4ogI9cVtu-4",
+     "vn": "jVQ5WUrbthQ"
+    },
+    "song": {
+     "en": "dnIIw4oLWPk",
+     "vn": "kb_OrE54jko"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-47_EN.html",
+    "vn": "lessons/factory/p2-47_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 48,
+   "id": "p2-48",
+   "dept": "자수",
+   "title": {
+    "ko": "자수 자수 자재 입고",
+    "en": "Embroidery: Receiving Materials",
+    "vn": "Xưởng thêu: Nhập vật tư thêu"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "kNmKwoL55KQ",
+     "vn": "UlvUo9JHfBQ"
+    },
+    "song": {
+     "en": "iHtRFA6WHH8",
+     "vn": "QicmhQ0S0wo"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-48_EN.html",
+    "vn": "lessons/factory/p2-48_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 49,
+   "id": "p2-49",
+   "dept": "자수",
+   "title": {
+    "ko": "자수 생산과 납품",
+    "en": "Embroidery: Production & Delivery",
+    "vn": "Thêu: Sản xuất, giao hàng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "t7I7IjcytyI",
+     "vn": "vKapxLmdycQ"
+    },
+    "song": {
+     "en": "Qr-r2XCUQ7E",
+     "vn": "CzbkyBpVpzg"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-49_EN.html",
+    "vn": "lessons/factory/p2-49_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 50,
+   "id": "p2-50",
+   "dept": "자수",
+   "title": {
+    "ko": "자수 자주 쓰는 문장",
+    "en": "Embroidery: Common Phrases (1)",
+    "vn": "Xưởng thêu: Câu thường dùng 1"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "wXFxlSbuxPs",
+     "vn": "toRS_cQhOUQ"
+    },
+    "song": {
+     "en": "gyIRI50C8Ug",
+     "vn": "jmXvULsqWBM"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-50_EN.html",
+    "vn": "lessons/factory/p2-50_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 51,
+   "id": "p2-51",
+   "dept": "자수",
+   "title": {
+    "ko": "자수 자주 쓰는 문장",
+    "en": "Embroidery: Common Phrases (2)",
+    "vn": "Xưởng thêu: Câu thường dùng 2"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "Nxc3kuWVB68",
+     "vn": "AwewUVhGCgs"
+    },
+    "song": {
+     "en": "8kOvRyvNIDY",
+     "vn": "iAeMMmLwMWQ"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-51_EN.html",
+    "vn": "lessons/factory/p2-51_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 52,
+   "id": "p2-52",
+   "dept": "자수",
+   "title": {
+    "ko": "자수 작업 단어",
+    "en": "Embroidery: Work Vocabulary",
+    "vn": "Xưởng thêu: Từ vựng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "ZTABayMbgvM",
+     "vn": "wEsmncbpT7w"
+    },
+    "song": {
+     "en": "ezdzLb-0Hew",
+     "vn": "FtRciMfwUSg"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-52_EN.html",
+    "vn": "lessons/factory/p2-52_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 53,
+   "id": "p2-53",
+   "dept": "워싱",
+   "title": {
+    "ko": "워싱 작업량과 약품",
+    "en": "Wash Room: Output & Chemicals",
+    "vn": "Xưởng wash: Sản lượng & hóa chất"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "C-c7wRK38So",
+     "vn": "s5JJ7OxMLPI"
+    },
+    "song": {
+     "en": "6SGyuNRsbQQ",
+     "vn": "7KhQW7eBnUU"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-53_EN.html",
+    "vn": "lessons/factory/p2-53_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 54,
+   "id": "p2-54",
+   "dept": "워싱",
+   "title": {
+    "ko": "워싱 세탁·건조 시간",
+    "en": "Wash Room: Washing & Drying Time",
+    "vn": "Xưởng wash: Thời gian giặt & sấy"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "rYq5MZWan4Y",
+     "vn": "PtayJOd8KCA"
+    },
+    "song": {
+     "en": "QhNjhB_qdLQ",
+     "vn": "kSulwZIyyMc"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-54_EN.html",
+    "vn": "lessons/factory/p2-54_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 55,
+   "id": "p2-55",
+   "dept": "워싱",
+   "title": {
+    "ko": "워싱 자주 쓰는 문장",
+    "en": "Wash Room: Common Phrases",
+    "vn": "Xưởng wash: Câu thường dùng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "RRXFD25VcYY",
+     "vn": "xHiJpyiD2LU"
+    },
+    "song": {
+     "en": "zNKYYftaAek",
+     "vn": "nggxQ4IPa7A"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-55_EN.html",
+    "vn": "lessons/factory/p2-55_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 56,
+   "id": "p2-56",
+   "dept": "워싱",
+   "title": {
+    "ko": "워싱 단어",
+    "en": "Wash Room: Vocabulary",
+    "vn": "Xưởng wash: Từ vựng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "T2hhU0-bIFY",
+     "vn": "sgNCl8LDQqM"
+    },
+    "song": {
+     "en": "6y1evddzCQQ",
+     "vn": "I8yjoMsLXUM"
+    }
+   },
+   "lesson": {
+    "en": "lessons/factory/p2-56_EN.html",
+    "vn": "lessons/factory/p2-56_VN.html"
+   },
+   "audiobook": null
+  }
+ ],
+ "guide": {
+  "en": "jChsDtT6w60",
+  "vn": "1kYbU0_ufiU"
+ }
+}

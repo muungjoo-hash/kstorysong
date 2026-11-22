@@ -1,0 +1,76 @@
+{
+ "qc_htm": [
+  {
+   "id": "ug6bARnUfb4",
+   "title": "HTM_Knit_00_Tape_Reading_and_Fractions_VN_v1.pptx (Cách đọc thước dây inch và phân số)"
+  },
+  {
+   "id": "V0KTxmiAGBQ",
+   "title": "HTM_Knit_01_Tops_VN_v1.pptx (Cách đo thông số – Áo dệt kim)"
+  },
+  {
+   "id": "LcjxXf0UFTA",
+   "title": "HTM_Knit_02_Hoodies_VN_v1.pptx (Cách đo thông số – Áo hoodie dệt kim)"
+  },
+  {
+   "id": "9cYxf6_YWd4",
+   "title": "HTM_Knit_03_Bottoms_VN_v1.pptx (Cách đo thông số – Quần dệt kim)"
+  },
+  {
+   "id": "6cLOmhxfL-4",
+   "title": "HTM_Knit_04_Dress_VN_v1.pptx (Cách đo thông số – Váy liền dệt kim)"
+  },
+  {
+   "id": "chMlqq3Pdp0",
+   "title": "HTM_Knit_05_Romper_VN_v1.pptx (Cách đo thông số – Bộ liền quần dệt kim)"
+  },
+  {
+   "id": "okcF7Loqq5U",
+   "title": "HTM_Knit_06_Baby_Bodysuit_VN_v1.pptx (Cách đo thông số – Bộ body em bé)"
+  }
+ ],
+ "qc_visual": [
+  {
+   "id": "2ivnrTCD5_c",
+   "title": "Garment Inspection Sequence (Quy trình kiểm hàng – Áo & quần dệt kim)"
+  },
+  {
+   "id": "qk6vyKW0tr4",
+   "title": "Visual Inspection Part 1/3: SW2 Codes, Critical, Fabric & Cutting (Kiểm tra ngoại quan – Phần 1/3)"
+  },
+  {
+   "id": "3VEMziGLYCE",
+   "title": "Visual Inspection Part 2/3: Sewing Defects (Kiểm tra ngoại quan – Phần 2/3)"
+  },
+  {
+   "id": "_Ojq5-IrktU",
+   "title": "Visual Inspection Part 3/3: Finishing, Print & Trims (Kiểm tra ngoại quan – Phần 3/3)"
+  },
+  {
+   "id": "ifM10_L216Q",
+   "title": "Sewing Issues: Causes & Solutions (Lỗi may: Nguyên nhân & Cách khắc phục)"
+  }
+ ],
+ "ai_use": [
+  {
+   "id": "KYYNCq76pPg",
+   "title": "AI Use Case: 3 Excel Files, 5 Prompts (AI 활용 사례: 엑셀 3개, 프롬프트 5번)"
+  },
+  {
+   "id": "DZRdZFAhXdI",
+   "title": "AI Use Case: 3 Excel Files, 5 Prompts (Ứng dụng AI: 3 file Excel, 5 câu lệnh)"
+  },
+  {
+   "id": "SitgaAgFGuI",
+   "title": "Getting Started with WorkBuddy – E0 (English)"
+  },
+  {
+   "id": "xeZWx4PjVKg",
+   "title": "Getting Started with WorkBuddy – E0 (Bắt đầu với WorkBuddy – E0)"
+  },
+  {
+   "id": "gClRfT4PMNU",
+   "title": "Aside_MES_Inspection_Point_Case_Study_VN"
+  }
+ ]
+}

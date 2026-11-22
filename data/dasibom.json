@@ -1,0 +1,1063 @@
+{
+ "episodes": [
+  {
+   "no": 0,
+   "id": "intro",
+   "title": {
+    "ko": "소개 영상",
+    "en": "Introduction",
+    "vn": "Giới thiệu"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "wDg_GtCRH1E",
+     "vn": "-EArhWzAHL4"
+    }
+   },
+   "lesson": {
+    "en": null,
+    "vn": null
+   },
+   "audiobook": null,
+   "intro": true
+  },
+  {
+   "no": 1,
+   "id": "ep01",
+   "title": {
+    "ko": "비 오는 정류장",
+    "en": "The Rainy Bus Stop",
+    "vn": "Trạm xe buýt ngày mưa"
+   },
+   "words": [
+    "비",
+    "버스",
+    "정류장",
+    "기다리다",
+    "우산",
+    "늦다",
+    "책",
+    "멀다/가깝다"
+   ],
+   "grammar": "① -아요/어요 ② N이/가 있어요 / 없어요",
+   "youtube": {
+    "lecture": {
+     "en": "EGV3wvwAHjI",
+     "vn": "vn2eJBrQ5x4"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep01_EN.html",
+    "vn": "lessons/dasibom/ep01_VN.html"
+   },
+   "audiobook": null,
+   "song": 1
+  },
+  {
+   "no": 2,
+   "id": "ep02",
+   "title": {
+    "ko": "우산",
+    "en": "The Umbrella",
+    "vn": "Chiếc ô"
+   },
+   "words": [
+    "쓰다(우산을)",
+    "괜찮다",
+    "뛰다",
+    "젖다",
+    "빌리다",
+    "돌려주다",
+    "이름",
+    "감기"
+   ],
+   "grammar": "① -(으)세요 ② -아/어 주세요",
+   "youtube": {
+    "lecture": {
+     "en": "G1sADjP27wk",
+     "vn": "Ed7VbwYC_q4"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep02_EN.html",
+    "vn": "lessons/dasibom/ep02_VN.html"
+   },
+   "audiobook": null,
+   "song": 1
+  },
+  {
+   "no": 3,
+   "id": "ep03",
+   "title": {
+    "ko": "책갈피",
+    "en": "The Bookmark",
+    "vn": "Chiếc kẹp sách"
+   },
+   "words": [
+    "만나다",
+    "웃다",
+    "선물",
+    "책갈피",
+    "꽃",
+    "고맙다",
+    "일하다",
+    "회사"
+   ],
+   "grammar": "① -(으)ㄹ게요 ② N(이)라고 해요",
+   "youtube": {
+    "lecture": {
+     "en": "WOlvBhdNaQo",
+     "vn": "gjOFV5Fk_VM"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep03_EN.html",
+    "vn": "lessons/dasibom/ep03_VN.html"
+   },
+   "audiobook": null,
+   "song": 2
+  },
+  {
+   "no": 4,
+   "id": "ep04",
+   "title": {
+    "ko": "봄날책방",
+    "en": "Spring Day Bookshop",
+    "vn": "Hiệu sách Ngày Xuân"
+   },
+   "words": [
+    "설레다",
+    "생각나다",
+    "추천하다",
+    "시",
+    "읽다",
+    "사다",
+    "또",
+    "쉬다"
+   ],
+   "grammar": "① -(으)ㄹ까요? ② -(으)ㄴ/는 것 같아요",
+   "youtube": {
+    "lecture": {
+     "en": "gxAMoobnOwU",
+     "vn": "Fk_-6sch26s"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep04_EN.html",
+    "vn": "lessons/dasibom/ep04_VN.html"
+   },
+   "audiobook": null,
+   "song": 2
+  },
+  {
+   "no": 5,
+   "id": "ep05",
+   "title": {
+    "ko": "커피 한잔",
+    "en": "A Cup of Coffee",
+    "vn": "Một tách cà phê"
+   },
+   "words": [
+    "커피",
+    "취미",
+    "고향",
+    "산책",
+    "바다",
+    "좋아하다",
+    "같다",
+    "함께"
+   ],
+   "grammar": "① -는 것을 좋아하다 ② -(으)ㄹ 때",
+   "youtube": {
+    "lecture": {
+     "en": "b0tRULZrsWU",
+     "vn": "Sv2Vrl_6DmE"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep05_EN.html",
+    "vn": "lessons/dasibom/ep05_VN.html"
+   },
+   "audiobook": null,
+   "song": 3
+  },
+  {
+   "no": 6,
+   "id": "ep06",
+   "title": {
+    "ko": "말 편하게 할까요?",
+    "en": "Shall We Speak Casually?",
+    "vn": "Mình nói chuyện thân mật nhé?"
+   },
+   "words": [
+    "친구",
+    "편하다",
+    "나이",
+    "오빠",
+    "말",
+    "문자",
+    "연락",
+    "벌금"
+   ],
+   "grammar": "① -아/어도 돼요? ② 반말 -아/어, -자",
+   "youtube": {
+    "lecture": {
+     "en": "3hTk9kK743g",
+     "vn": "3OyU1_sf2bQ"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep06_EN.html",
+    "vn": "lessons/dasibom/ep06_VN.html"
+   },
+   "audiobook": null,
+   "song": 3
+  },
+  {
+   "no": 7,
+   "id": "ep07",
+   "title": {
+    "ko": "벚꽃길",
+    "en": "The Cherry Blossom Path",
+    "vn": "Con đường hoa anh đào"
+   },
+   "words": [
+    "벚꽃",
+    "약속",
+    "사진",
+    "꿈",
+    "미래",
+    "행복",
+    "함께",
+    "언젠가"
+   ],
+   "grammar": "① -기로 하다 ② -(으)면",
+   "youtube": {
+    "lecture": {
+     "en": "BL-YknwJ0lo",
+     "vn": "oID8xmdUkO4"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep07_EN.html",
+    "vn": "lessons/dasibom/ep07_VN.html"
+   },
+   "audiobook": null,
+   "song": 4
+  },
+  {
+   "no": 8,
+   "id": "ep08",
+   "title": {
+    "ko": "같은 우산 아래",
+    "en": "Under the Same Umbrella",
+    "vn": "Dưới cùng một chiếc ô"
+   },
+   "words": [
+    "고백",
+    "사랑",
+    "보고 싶다",
+    "거울",
+    "연습",
+    "떨리다",
+    "사귀다",
+    "마음"
+   ],
+   "grammar": "① -고 싶다 ② -(으)ㄹ래?",
+   "youtube": {
+    "lecture": {
+     "en": "kzmTGb_kegQ",
+     "vn": "9EomPl7ZHaw"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep08_EN.html",
+    "vn": "lessons/dasibom/ep08_VN.html"
+   },
+   "audiobook": null,
+   "song": 4
+  },
+  {
+   "no": 9,
+   "id": "ep09",
+   "title": {
+    "ko": "백 일",
+    "en": "Our 100th Day",
+    "vn": "Kỷ niệm 100 ngày"
+   },
+   "words": [
+    "바쁘다",
+    "야근",
+    "백 일",
+    "답장",
+    "늦다",
+    "미안하다",
+    "기다리다",
+    "서운하다"
+   ],
+   "grammar": "① -아/어서 미안해 ② -느라고",
+   "youtube": {
+    "lecture": {
+     "en": "F7NCgpZ71aI",
+     "vn": "xE0I6xkpImw"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep09_EN.html",
+    "vn": "lessons/dasibom/ep09_VN.html"
+   },
+   "audiobook": null,
+   "song": 5
+  },
+  {
+   "no": 10,
+   "id": "ep10",
+   "title": {
+    "ko": "하노이",
+    "en": "Hanoi",
+    "vn": "Hà Nội"
+   },
+   "words": [
+    "기회",
+    "지사",
+    "고민",
+    "꿈",
+    "결정하다",
+    "믿다",
+    "출장",
+    "만약에"
+   ],
+   "grammar": "① -게 되다 ② -(으)ㄹ지 모르겠다",
+   "youtube": {
+    "lecture": {
+     "en": "1Mefsh8qQ74",
+     "vn": "oxLL_h-eXuc"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep10_EN.html",
+    "vn": "lessons/dasibom/ep10_VN.html"
+   },
+   "audiobook": null,
+   "song": 5
+  },
+  {
+   "no": 11,
+   "id": "ep11",
+   "title": {
+    "ko": "나만 몰랐어",
+    "en": "I Was the Only One Who Didn't Know",
+    "vn": "Chỉ mình em không biết"
+   },
+   "words": [
+    "오해",
+    "소식",
+    "갑자기",
+    "듣다",
+    "거짓말",
+    "숨기다",
+    "친구",
+    "직접"
+   ],
+   "grammar": "① -다면서요? ② -잖아",
+   "youtube": {
+    "lecture": {
+     "en": "Ec71hjvswUM",
+     "vn": "g8Fc0hQ-S4U"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep11_EN.html",
+    "vn": "lessons/dasibom/ep11_VN.html"
+   },
+   "audiobook": null,
+   "song": 6
+  },
+  {
+   "no": 12,
+   "id": "ep12",
+   "title": {
+    "ko": "왜 말 안 했어?",
+    "en": "Why Didn't You Tell Me?",
+    "vn": "Sao anh không nói với em?"
+   },
+   "words": [
+    "상처",
+    "눈물",
+    "이유",
+    "슬프다",
+    "혼자",
+    "응원하다",
+    "부탁",
+    "거리"
+   ],
+   "grammar": "① 왜 안 -았/었어? ② -(으)니까",
+   "youtube": {
+    "lecture": {
+     "en": "_8QScZpE4fk",
+     "vn": "xSNdPKDwhdk"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep12_EN.html",
+    "vn": "lessons/dasibom/ep12_VN.html"
+   },
+   "audiobook": null,
+   "song": 6
+  },
+  {
+   "no": 13,
+   "id": "ep13",
+   "title": {
+    "ko": "각자의 밤",
+    "en": "Separate Nights",
+    "vn": "Mỗi người một đêm"
+   },
+   "words": [
+    "혼자",
+    "걱정",
+    "포기하다",
+    "이기적이다",
+    "솔직하다",
+    "무섭다",
+    "결정",
+    "대답"
+   ],
+   "grammar": "① -(으)ㄹ까 봐 ② -아/어야 하다",
+   "youtube": {
+    "lecture": {
+     "en": "Psm5Xg5iuJ0",
+     "vn": "w2eceQ97B_U"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep13_EN.html",
+    "vn": "lessons/dasibom/ep13_VN.html"
+   },
+   "audiobook": null,
+   "song": 7
+  },
+  {
+   "no": 14,
+   "id": "ep14",
+   "title": {
+    "ko": "비 오는 정류장",
+    "en": "The Rainy Bus Stop",
+    "vn": "Trạm xe buýt ngày mưa"
+   },
+   "words": [
+    "이별",
+    "마지막",
+    "멈추다",
+    "헤어지다",
+    "잠깐",
+    "응원하다",
+    "끝",
+    "정하다"
+   ],
+   "grammar": "① -자 (제안) ② -는 게 좋겠다",
+   "youtube": {
+    "lecture": {
+     "en": "eqEpuBhfcdE",
+     "vn": "jccZYVUJ8Qw"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep14_EN.html",
+    "vn": "lessons/dasibom/ep14_VN.html"
+   },
+   "audiobook": null,
+   "song": 7
+  },
+  {
+   "no": 15,
+   "id": "ep15",
+   "title": {
+    "ko": "떠나는 날",
+    "en": "The Day of Leaving",
+    "vn": "Ngày ra đi"
+   },
+   "words": [
+    "떠나다",
+    "안녕",
+    "공항",
+    "비행기",
+    "짐",
+    "배웅",
+    "출발",
+    "붙잡다"
+   ],
+   "grammar": "① -기 전에 ② -지 마",
+   "youtube": {
+    "lecture": {
+     "en": "xOhzh1wnSKA",
+     "vn": "p5b3swOXtl0"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep15_EN.html",
+    "vn": "lessons/dasibom/ep15_VN.html"
+   },
+   "audiobook": null,
+   "song": 8
+  },
+  {
+   "no": 16,
+   "id": "ep16",
+   "title": {
+    "ko": "봉투 속의 봄",
+    "en": "Spring in an Envelope",
+    "vn": "Mùa xuân trong phong bì"
+   },
+   "words": [
+    "기억",
+    "추억",
+    "봉투",
+    "편지",
+    "사진",
+    "창문",
+    "구름",
+    "지키다"
+   ],
+   "grammar": "① -았/었던 ② -네 (깨달음)",
+   "youtube": {
+    "lecture": {
+     "en": "QvHZUK185uY",
+     "vn": "WfgrEZbgzZg"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep16_EN.html",
+    "vn": "lessons/dasibom/ep16_VN.html"
+   },
+   "audiobook": null,
+   "song": 8
+  },
+  {
+   "no": 17,
+   "id": "ep17",
+   "title": {
+    "ko": "하노이의 비",
+    "en": "Rain in Hanoi",
+    "vn": "Mưa Hà Nội"
+   },
+   "words": [
+    "그리움",
+    "가랑비",
+    "동료",
+    "공부하다",
+    "틀리다",
+    "보고 있다",
+    "보고 싶다",
+    "생각나다"
+   ],
+   "grammar": "① -(으)ㄹ 때마다 ② -고 있다",
+   "youtube": {
+    "lecture": {
+     "en": null,
+     "vn": "cGI1nPBc_K8"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep17_EN.html",
+    "vn": "lessons/dasibom/ep17_VN.html"
+   },
+   "audiobook": null,
+   "song": 9
+  },
+  {
+   "no": 18,
+   "id": "ep18",
+   "title": {
+    "ko": "서울의 봄",
+    "en": "Spring in Seoul",
+    "vn": "Mùa xuân Seoul"
+   },
+   "words": [
+    "추억",
+    "기다림",
+    "벤치",
+    "혼자",
+    "습관",
+    "피다",
+    "지다",
+    "잘 지내다"
+   ],
+   "grammar": "① -던 ② -았/었으면 좋겠다",
+   "youtube": {
+    "lecture": {
+     "en": "4ezUJHcPfBU",
+     "vn": "xiSaQ7t77FA"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep18_EN.html",
+    "vn": "lessons/dasibom/ep18_VN.html"
+   },
+   "audiobook": null,
+   "song": 9
+  },
+  {
+   "no": 19,
+   "id": "ep19",
+   "title": {
+    "ko": "보내지 못한 메시지",
+    "en": "The Unsent Message",
+    "vn": "Tin nhắn không gửi đi"
+   },
+   "words": [
+    "후회",
+    "용기",
+    "지우다",
+    "보내다",
+    "메시지",
+    "밤",
+    "잠",
+    "한 번만"
+   ],
+   "grammar": "① -았/었어야 했는데 ② -(으)ㄹ 걸 그랬다",
+   "youtube": {
+    "lecture": {
+     "en": "as0Gh4264-M",
+     "vn": "1OTfj9T2EqA"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep19_EN.html",
+    "vn": "lessons/dasibom/ep19_VN.html"
+   },
+   "audiobook": null,
+   "song": 10
+  },
+  {
+   "no": 20,
+   "id": "ep20",
+   "title": {
+    "ko": "진심",
+    "en": "True Feelings",
+    "vn": "Tấm lòng thật"
+   },
+   "words": [
+    "진심",
+    "이유",
+    "전하다",
+    "연장하다",
+    "결심하다",
+    "준비하다",
+    "소중하다",
+    "깨닫다"
+   ],
+   "grammar": "① -다고 하다 (간접화법) ② -(으)려고",
+   "youtube": {
+    "lecture": {
+     "en": "Deucw9SUjUE",
+     "vn": "gszr4grfY_E"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep20_EN.html",
+    "vn": "lessons/dasibom/ep20_VN.html"
+   },
+   "audiobook": null,
+   "song": 10
+  },
+  {
+   "no": 21,
+   "id": "ep21",
+   "title": {
+    "ko": "2년 뒤",
+    "en": "Two Years Later",
+    "vn": "Hai năm sau"
+   },
+   "words": [
+    "재회",
+    "돌아오다",
+    "성장하다",
+    "변하다",
+    "책방",
+    "개업",
+    "용기",
+    "단골"
+   ],
+   "grammar": "① -(으)ㄴ 지 N이/가 되다 ② -게 되다 (복습)",
+   "youtube": {
+    "lecture": {
+     "en": "vD1j9N5mnaY",
+     "vn": "m9pxqSqX2Fw"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep21_EN.html",
+    "vn": "lessons/dasibom/ep21_VN.html"
+   },
+   "audiobook": null,
+   "song": 11
+  },
+  {
+   "no": 22,
+   "id": "ep22",
+   "title": {
+    "ko": "같은 정류장",
+    "en": "The Same Bus Stop",
+    "vn": "Vẫn trạm xe buýt ấy"
+   },
+   "words": [
+    "우산",
+    "씌우다",
+    "이해하다",
+    "어색하다",
+    "그대로",
+    "오랜만",
+    "반갑다",
+    "벌금"
+   ],
+   "grammar": "① -아/어 줄게 ② -(으)ㄹ 수 있다",
+   "youtube": {
+    "lecture": {
+     "en": "kjAtIFQtGcc",
+     "vn": "TAariN1D1cg"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep22_EN.html",
+    "vn": "lessons/dasibom/ep22_VN.html"
+   },
+   "audiobook": null,
+   "song": 11
+  },
+  {
+   "no": 23,
+   "id": "ep23",
+   "title": {
+    "ko": "솔직한 대화",
+    "en": "An Honest Talk",
+    "vn": "Cuộc trò chuyện thật lòng"
+   },
+   "words": [
+    "용서",
+    "믿음",
+    "사과하다",
+    "솔직하다",
+    "진심",
+    "용기",
+    "약속",
+    "앞으로"
+   ],
+   "grammar": "① -아/어서 고마워 / 미안해 ② -기로 했어",
+   "youtube": {
+    "lecture": {
+     "en": "gfMn7vcvJr8",
+     "vn": "vd_UNT-g18E"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep23_EN.html",
+    "vn": "lessons/dasibom/ep23_VN.html"
+   },
+   "audiobook": null,
+   "song": 12
+  },
+  {
+   "no": 24,
+   "id": "ep24",
+   "title": {
+    "ko": "다시, 봄",
+    "en": "Again, Spring",
+    "vn": "Xuân lại về"
+   },
+   "words": [
+    "다시",
+    "시작하다",
+    "행복",
+    "미래",
+    "꽃잎",
+    "손",
+    "함께",
+    "봄"
+   ],
+   "grammar": "① 다시 -아/어 보다 ② 총정리 (1~23화 복습)",
+   "youtube": {
+    "lecture": {
+     "en": "dha8f_aa7p4",
+     "vn": "xxn1CMk90KI"
+    }
+   },
+   "lesson": {
+    "en": "lessons/dasibom/ep24_EN.html",
+    "vn": "lessons/dasibom/ep24_VN.html"
+   },
+   "audiobook": null,
+   "song": 12
+  }
+ ],
+ "songs": [
+  {
+   "no": 1,
+   "id": "song01",
+   "episodes": [
+    1,
+    2
+   ],
+   "title": {
+    "en": "One Umbrella (우산 하나)",
+    "vn": "우산 하나 (Một chiếc ô)"
+   },
+   "youtube": {
+    "ost": {
+     "en": "DNqoRoNWkj0",
+     "vn": "YWpcIVtpgek"
+    },
+    "songLesson": {
+     "en": "71RMwxMsvh8",
+     "vn": "gE4SlqXAcGk"
+    }
+   }
+  },
+  {
+   "no": 2,
+   "id": "song02",
+   "episodes": [
+    3,
+    4
+   ],
+   "title": {
+    "en": "The Day the Spring Rain Fell (봄비가 내리던 날)",
+    "vn": "봄비가 내리던 날 (Ngày mưa xuân rơi)"
+   },
+   "youtube": {
+    "ost": {
+     "en": "3Jg_TFsXEvE",
+     "vn": "9d3dXaVJJ38"
+    },
+    "songLesson": {
+     "en": "y9gN6qkgr9g",
+     "vn": "ZomhAHrm5QI"
+    }
+   }
+  },
+  {
+   "no": 3,
+   "id": "song03",
+   "episodes": [
+    5,
+    6
+   ],
+   "title": {
+    "en": "Can We Talk Casually? (말 편하게 해도 돼?)",
+    "vn": "말 편하게 해도 돼? (Mình nói chuyện thân mật được không?)"
+   },
+   "youtube": {
+    "ost": {
+     "en": "4KrilhacDI8",
+     "vn": "V6fOIXqEBKk"
+    },
+    "songLesson": {
+     "en": "JWRxzS-CDWQ",
+     "vn": "63Y1aB0D0hQ"
+    }
+   }
+  },
+  {
+   "no": 4,
+   "id": "song04",
+   "episodes": [
+    7,
+    8
+   ],
+   "title": {
+    "en": "The Same Heart (같은 마음)",
+    "vn": "같은 마음 (Cùng một trái tim)"
+   },
+   "youtube": {
+    "ost": {
+     "en": "MNTyX9OYyrg",
+     "vn": "NX3vftC5T5M"
+    },
+    "songLesson": {
+     "en": "dTHhatzUVsc",
+     "vn": "9VHwCPEjIA4"
+    }
+   }
+  },
+  {
+   "no": 5,
+   "id": "song05",
+   "episodes": [
+    9,
+    10
+   ],
+   "title": {
+    "en": "A Late Reply (늦은 답장)",
+    "vn": "늦은 답장 (Tin nhắn trả lời muộn)"
+   },
+   "youtube": {
+    "ost": {
+     "en": "bKJd4K8m08k",
+     "vn": "EjgddOc_epg"
+    },
+    "songLesson": {
+     "en": "509--HkWwZA",
+     "vn": "3SXoUEKl3xA"
+    }
+   }
+  },
+  {
+   "no": 6,
+   "id": "song06",
+   "episodes": [
+    11,
+    12
+   ],
+   "title": {
+    "en": "Drifting Apart (멀어지는 거리)",
+    "vn": "멀어지는 거리 (Khoảng cách xa dần)"
+   },
+   "youtube": {
+    "ost": {
+     "en": "vY_SkS9VGQ8",
+     "vn": "gU1rZ1TtTb4"
+    },
+    "songLesson": {
+     "en": "gsRBN7ucCaI",
+     "vn": "TbMyooSaIc8"
+    }
+   }
+  },
+  {
+   "no": 7,
+   "id": "song07",
+   "episodes": [
+    13,
+    14
+   ],
+   "title": {
+    "en": "The Rainy Bus Stop (비 오는 정류장)",
+    "vn": "비 오는 정류장 (Trạm xe buýt ngày mưa)"
+   },
+   "youtube": {
+    "ost": {
+     "en": "xFnY-mO7r18",
+     "vn": "MT5Ga7k75nU"
+    },
+    "songLesson": {
+     "en": "ysU6kwk-YKI",
+     "vn": "4XoqDe3djvA"
+    }
+   }
+  },
+  {
+   "no": 8,
+   "id": "song08",
+   "episodes": [
+    15,
+    16
+   ],
+   "title": {
+    "en": "The Last Goodbye (마지막 인사)",
+    "vn": "마지막 인사 (Lời chào cuối cùng)"
+   },
+   "youtube": {
+    "ost": {
+     "en": "plAoOmNUFZI",
+     "vn": "jAuTLWGTCF4"
+    },
+    "songLesson": {
+     "en": "-z90KieuG6g",
+     "vn": "Xnhuz8EDtIQ"
+    }
+   }
+  },
+  {
+   "no": 9,
+   "id": "song09",
+   "episodes": [
+    17,
+    18
+   ],
+   "title": {
+    "en": "Rain in Hanoi (하노이의 비)",
+    "vn": "하노이의 비 (Mưa Hà Nội)"
+   },
+   "youtube": {
+    "ost": {
+     "en": "xmicYFz0zB8",
+     "vn": "ak34TDIK-X4"
+    },
+    "songLesson": {
+     "en": "BU9_ABYfr8w",
+     "vn": "ImmbLBrnzps"
+    }
+   }
+  },
+  {
+   "no": 10,
+   "id": "song10",
+   "episodes": [
+    19,
+    20
+   ],
+   "title": {
+    "en": "Days I Miss You (보고 싶은 날)",
+    "vn": "보고 싶은 날 (Những ngày nhớ anh)"
+   },
+   "youtube": {
+    "ost": {
+     "en": "qhN6h5ihFbw",
+     "vn": "r-a1v--kaIw"
+    },
+    "songLesson": {
+     "en": "MDCk-XqwGdc",
+     "vn": "YHdrBU4xdQ0"
+    }
+   }
+  },
+  {
+   "no": 11,
+   "id": "song11",
+   "episodes": [
+    21,
+    22
+   ],
+   "title": {
+    "en": "I'll Hold the Umbrella for You (우산을 씌워 줄게)",
+    "vn": "우산을 씌워 줄게 (Em sẽ che ô cho anh)"
+   },
+   "youtube": {
+    "ost": {
+     "en": "UAYKywkp3Dk",
+     "vn": "OFl21wPWR8A"
+    },
+    "songLesson": {
+     "en": "4D8F6V4j94w",
+     "vn": "rU83i86aUUg"
+    }
+   }
+  },
+  {
+   "no": 12,
+   "id": "song12",
+   "episodes": [
+    23,
+    24
+   ],
+   "title": {
+    "en": "Again, Spring (다시, 봄)",
+    "vn": "다시, 봄 (Xuân lại về)"
+   },
+   "youtube": {
+    "ost": {
+     "en": "BuLaBpWO-Xs",
+     "vn": "5Ms-Z8GhLxE"
+    },
+    "songLesson": {
+     "en": null,
+     "vn": "wU-_SZdWBQI"
+    }
+   }
+  }
+ ],
+ "intro": {
+  "en": "wDg_GtCRH1E",
+  "vn": "-EArhWzAHL4"
+ }
+}

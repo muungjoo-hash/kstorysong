@@ -1,0 +1,293 @@
+{
+ "episodes": [
+  {
+   "no": 0,
+   "id": "e00",
+   "title": {
+    "ko": "한글 만나기",
+    "en": "Meet Hangeul",
+    "vn": "Làm quen với Hangeul"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "z4wxPfO3NKM",
+     "vn": "44O19tQWO1k"
+    }
+   },
+   "lesson": {
+    "en": null,
+    "vn": null
+   },
+   "audiobook": null,
+   "noLesson": true
+  },
+  {
+   "no": 1,
+   "id": "e01",
+   "title": {
+    "ko": "기본 모음",
+    "en": "Basic Vowels",
+    "vn": "Nguyên âm cơ bản"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "bHy6XmSvpYQ",
+     "vn": "nW6u3z1ReDs"
+    }
+   },
+   "lesson": {
+    "en": "lessons/hangeul/e01_EN.html",
+    "vn": "lessons/hangeul/e01_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 2,
+   "id": "e02",
+   "title": {
+    "ko": "기본 자음",
+    "en": "Basic Consonants",
+    "vn": "Phụ âm cơ bản"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "FfGd-goD7Mc",
+     "vn": "o09WEz-ARgs"
+    }
+   },
+   "lesson": {
+    "en": "lessons/hangeul/e02_EN.html",
+    "vn": "lessons/hangeul/e02_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 3,
+   "id": "e03",
+   "title": {
+    "ko": "격음(거센소리)",
+    "en": "Aspirated Consonants",
+    "vn": "Phụ âm bật hơi"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "wLcuWDKQTuY",
+     "vn": "cp-F5If9OFg"
+    }
+   },
+   "lesson": {
+    "en": "lessons/hangeul/e03_EN.html",
+    "vn": "lessons/hangeul/e03_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 4,
+   "id": "e04",
+   "title": {
+    "ko": "경음(된소리)",
+    "en": "Tense Consonants",
+    "vn": "Phụ âm căng"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "xWK6L28hPng",
+     "vn": "lSf7HB2NShw"
+    }
+   },
+   "lesson": {
+    "en": "lessons/hangeul/e04_EN.html",
+    "vn": "lessons/hangeul/e04_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 5,
+   "id": "e05",
+   "title": {
+    "ko": "이중모음 1",
+    "en": "Diphthongs 1",
+    "vn": "Nguyên âm đôi 1"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "trvZxM3tQ-I",
+     "vn": "sirmB7EAYys"
+    }
+   },
+   "lesson": {
+    "en": "lessons/hangeul/e05_EN.html",
+    "vn": "lessons/hangeul/e05_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 6,
+   "id": "e06",
+   "title": {
+    "ko": "이중모음 2",
+    "en": "Diphthongs 2",
+    "vn": "Nguyên âm đôi 2"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "WyKtEv002mw",
+     "vn": "oBeKeUtTHDs"
+    }
+   },
+   "lesson": {
+    "en": "lessons/hangeul/e06_EN.html",
+    "vn": "lessons/hangeul/e06_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 7,
+   "id": "e07",
+   "title": {
+    "ko": "받침 1",
+    "en": "Final Consonants 1",
+    "vn": "Phụ âm cuối 1"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "7d1hYta7Rgw",
+     "vn": "dnjX3ztyWNo"
+    }
+   },
+   "lesson": {
+    "en": "lessons/hangeul/e07_EN.html",
+    "vn": "lessons/hangeul/e07_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 8,
+   "id": "e08",
+   "title": {
+    "ko": "받침 2",
+    "en": "Final Consonants 2",
+    "vn": "Phụ âm cuối 2"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "D0OEN7GTkXs",
+     "vn": "TpoZaAPeZ_g"
+    }
+   },
+   "lesson": {
+    "en": "lessons/hangeul/e08_EN.html",
+    "vn": "lessons/hangeul/e08_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 9,
+   "id": "e09",
+   "title": {
+    "ko": "겹받침",
+    "en": "Double Final Consonants",
+    "vn": "Phụ âm cuối đôi"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "rZSZz27g8to",
+     "vn": "mdlT0a9h0oc"
+    }
+   },
+   "lesson": {
+    "en": "lessons/hangeul/e09_EN.html",
+    "vn": "lessons/hangeul/e09_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 10,
+   "id": "e10",
+   "title": {
+    "ko": "연음",
+    "en": "Linking Sounds",
+    "vn": "Nối âm"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "Wm3VlSX5f6Q",
+     "vn": "grZLesxeHiw"
+    }
+   },
+   "lesson": {
+    "en": "lessons/hangeul/e10_EN.html",
+    "vn": "lessons/hangeul/e10_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 11,
+   "id": "e11",
+   "title": {
+    "ko": "숫자",
+    "en": "Numbers",
+    "vn": "Số đếm"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "8H7e5XniRGM",
+     "vn": "8TtJ88uhRHs"
+    }
+   },
+   "lesson": {
+    "en": "lessons/hangeul/e11_EN.html",
+    "vn": "lessons/hangeul/e11_VN.html"
+   },
+   "audiobook": null
+  },
+  {
+   "no": 12,
+   "id": "e12",
+   "title": {
+    "ko": "기본 공장 문장",
+    "en": "Basic Factory Phrases",
+    "vn": "Câu cơ bản ở nhà máy"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "iNBRyexCIGM",
+     "vn": "VX6D1Eai-ek"
+    }
+   },
+   "lesson": {
+    "en": "lessons/hangeul/e12_EN.html",
+    "vn": "lessons/hangeul/e12_VN.html"
+   },
+   "audiobook": null
+  }
+ ],
+ "extras": [
+  {
+   "id": "blueprint",
+   "title": {
+    "en": "Hangeul Blueprint: The Architecture of Sound (English)",
+    "vn": "Hangeul Blueprint (Kiến trúc của Âm thanh)"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "ulW9Fc56Who",
+     "vn": "WMZm_0TZlv4"
+    }
+   }
+  },
+  {
+   "id": "review",
+   "title": {
+    "en": "Hangeul Reading Review (English)",
+    "vn": "Hangeul Reading Review (Ôn tập đọc Hangeul)"
+   },
+   "youtube": {
+    "lecture": {
+     "en": "INAvzgqG_7k",
+     "vn": "_8gt12i6t6M"
+    }
+   }
+  }
+ ]
+}

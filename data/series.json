@@ -1,0 +1,109 @@
+{
+ "site": {
+  "name": "K-Story Song",
+  "tagline": {
+   "ko": "이야기와 노래로 배우는 한국어",
+   "en": "Learn Korean through stories and songs",
+   "vn": "Học tiếng Hàn qua truyện và bài hát"
+  },
+  "youtube": "https://www.youtube.com/@alexjoo8303"
+ },
+ "series": [
+  {
+   "id": "hangeul",
+   "order": 1,
+   "status": "live",
+   "color": "#ff7a59",
+   "icon": "ㄱ",
+   "file": "data/hangeul.json",
+   "kind": "episodes",
+   "title": {
+    "ko": "한글 자음·모음 기본",
+    "en": "Hangeul Basics",
+    "vn": "Hangeul cơ bản"
+   },
+   "desc": {
+    "ko": "한글의 자음, 모음, 받침, 연음, 숫자까지 13강.",
+    "en": "13 lessons: vowels, consonants, final consonants, linking, numbers.",
+    "vn": "13 bài: nguyên âm, phụ âm, patchim, nối âm, số đếm."
+   }
+  },
+  {
+   "id": "factory",
+   "order": 2,
+   "status": "live",
+   "color": "#3b82f6",
+   "icon": "工",
+   "file": "data/factory.json",
+   "kind": "episodes",
+   "title": {
+    "ko": "공장 한국어",
+    "en": "Korean for Factory Workers",
+    "vn": "Tiếng Hàn tại nhà máy"
+   },
+   "desc": {
+    "ko": "사무실, QC, 창고, 재단, 재봉, 포장 등 부서별 56회 회화와 노래.",
+    "en": "56 department dialogues and songs: office, QC, warehouse, cutting, sewing, packing.",
+    "vn": "56 bài hội thoại và bài hát theo bộ phận."
+   }
+  },
+  {
+   "id": "dasibom",
+   "order": 3,
+   "status": "live",
+   "color": "#ec4899",
+   "icon": "봄",
+   "file": "data/dasibom.json",
+   "kind": "episodes",
+   "title": {
+    "ko": "다시, 봄",
+    "en": "Again, Spring",
+    "vn": "Xuân lại về"
+   },
+   "desc": {
+    "ko": "24화 오디오북 로맨스와 OST 12곡으로 배우는 한국어.",
+    "en": "A 24-episode audiobook romance with 12 OST songs.",
+    "vn": "Tiểu thuyết âm thanh 24 tập và 12 bài OST."
+   }
+  },
+  {
+   "id": "light",
+   "order": 4,
+   "status": "soon",
+   "color": "#f59e0b",
+   "icon": "빛",
+   "file": null,
+   "kind": "episodes",
+   "title": {
+    "ko": "빛이 머물던 자리",
+    "en": "Where the Light Stayed",
+    "vn": "Nơi ánh sáng ở lại"
+   },
+   "desc": {
+    "ko": "세 번의 만남, 24화. 준비 중입니다.",
+    "en": "Three meetings, 24 episodes. Coming soon.",
+    "vn": "Ba lần gặp gỡ, 24 tập. Sắp ra mắt."
+   }
+  }
+ ],
+ "other": [
+  {
+   "title": {
+    "en": "QC: How To Measure (HTM)"
+   },
+   "playlist": "qc_htm"
+  },
+  {
+   "title": {
+    "en": "QC: Visual Inspection"
+   },
+   "playlist": "qc_visual"
+  },
+  {
+   "title": {
+    "en": "AI Use Cases"
+   },
+   "playlist": "ai_use"
+  }
+ ]
+}
