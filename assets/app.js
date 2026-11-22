@@ -7,7 +7,6 @@ vn:{home:'Trang chủ',watch:'Xem trên YouTube',lecture:'Bài giảng',song:'B�
 const t=k=>UI[L][k]||k;
 const store={get:(k,d)=>{try{return JSON.parse(localStorage['kss_'+k])}catch{return d}},set:(k,v)=>localStorage['kss_'+k]=JSON.stringify(v)};
 const cache={};const J=async u=>cache[u]||(cache[u]=(window.KSS_DATA&&window.KSS_DATA[u])||await (await fetch(u)).json());
-const _pub={};const isPub=async id=>{if(_pub[id]!==undefined)return _pub[id];let v=true;try{const r=await fetch('https://www.youtube.com/oembed?format=json&url='+encodeURIComponent('https://www.youtube.com/watch?v='+id));v=!(r.status===401||r.status===403||r.status===404||r.status===400)}catch(e){v=true}return _pub[id]=v};
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const yurl=id=>'https://www.youtube.com/watch?v='+id;
 const embed=id=>'<div class="player"><iframe src="https://www.youtube-nocookie.com/embed/'+id+'" allow="accelerometer;autoplay;clipboard-write;encrypted-media;picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe></div><div class="row"><a class="btn" target="_blank" rel="noopener" href="'+yurl(id)+'">▶ '+t('watch')+'</a></div>';
@@ -73,7 +72,7 @@ const vl=vlang();const src=[];const y=e.youtube||{};
 if(y.lecture)src.push(['lecture',t('lecture'),y.lecture[vl]||y.lecture.en||y.lecture.vn]);
 if(y.song)src.push(['song',t('song'),y.song[vl]||y.song.en||y.song.vn]);
 if(D.songs&&e.song){const sg=D.songs.find(x=>x.no===e.song);if(sg){src.push(['ost',t('ost'),sg.youtube.ost[vl]]);src.push(['songlesson',t('songlesson'),sg.youtube.songLesson[vl]])}}
-const les=e.lesson&&(e.lesson[vl]||e.lesson.en||e.lesson.vn);const gid=(y.lecture&&y.lecture[vl])||(e.audiobook&&e.audiobook[vl]);const lesOk=les&&(!gid||await isPub(gid));if(lesOk)src.push(['lesson',t('lesson'),les,true]);
+const les=e.lesson&&(e.lesson[vl]||e.lesson.en||e.lesson.vn);if(les)src.push(['lesson',t('lesson'),les,true]);
 if(e.audiobook)src.push(['audiobook',t('audiobook'),e.audiobook[vl]||e.audiobook.en]);
 const ok=src.filter(x=>x[2]);let cur=ok[0]?ok[0][0]:null;
 const draw=()=>{const a=ok.find(x=>x[0]===cur);
