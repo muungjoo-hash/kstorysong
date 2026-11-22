@@ -9,7 +9,7 @@ const store={get:(k,d)=>{try{return JSON.parse(localStorage['kss_'+k])}catch{ret
 const cache={};const J=async u=>cache[u]||(cache[u]=(window.KSS_DATA&&window.KSS_DATA[u])||await (await fetch(u)).json());
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const yurl=id=>'https://www.youtube.com/watch?v='+id;
-const embed=id=>'<div class="player"><iframe src="https://www.youtube-nocookie.com/embed/'+id+'" allow="accelerometer;autoplay;clipboard-write;encrypted-media;picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="row"><a class="btn" target="_blank" rel="noopener" href="'+yurl(id)+'">▶ '+t('watch')+'</a></div>';
+const embed=id=>'<div class="player"><iframe src="https://www.youtube-nocookie.com/embed/'+id+'" allow="accelerometer;autoplay;clipboard-write;encrypted-media;picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe></div><div class="row"><a class="btn" target="_blank" rel="noopener" href="'+yurl(id)+'">▶ '+t('watch')+'</a></div>';
 let CL=localStorage.kssCL||(L==='vn'?'vn':'en');const vlang=()=>CL;
 const clsw=()=>'<div class="clsw"><span class="mut">'+({ko:'강의 언어',en:'Lesson language',vn:'Ngôn ngữ bài giảng'}[L])+'</span><button data-cl="en" class="tab '+(CL==='en'?'on':'')+'">English</button><button data-cl="vn" class="tab '+(CL==='vn'?'on':'')+'">Tiếng Việt</button></div>';
 const bindcl=()=>app.querySelectorAll('[data-cl]').forEach(b=>b.onclick=()=>{CL=b.dataset.cl;localStorage.kssCL=CL;route()}); // 영상/강의 언어: KO 선택 시 EN
