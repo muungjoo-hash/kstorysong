@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>《다시, 봄》 OST 12곡 전체 단어 빈도 사전 (214단어) | KStorySong</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --border: #e2e8f0;
+      --text-main: #0f172a;
+      --text-sub: #475569;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --rose: #e11d48;
+      --rose-soft: #fff1f2;
+      --emerald: #059669;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 24px 16px 64px;
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    header {
+      border-bottom: 2px solid var(--text-main);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .brand-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: var(--text-sub);
+      font-size: 15px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-sub);
+      font-weight: 600;
+    }
+    .stat-value {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-top: 4px;
+    }
+    .stat-desc {
+      font-size: 12px;
+      color: var(--text-sub);
+      margin-top: 2px;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      background: var(--surface);
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tab-btn {
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text-sub);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .tab-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .tab-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+    .search-box {
+      flex: 1 1 260px;
+      max-width: 360px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      background: #ffffff;
+      color: var(--text-main);
+    }
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+    .result-info {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #ffffff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 780px;
+      font-size: 14px;
+    }
+    thead th {
+      background: #f1f5f9;
+      color: var(--text-main);
+      font-weight: 700;
+      text-align: left;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    tbody td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    tbody tr:hover {
+      background: #f8fafc;
+    }
+    .col-rank {
+      width: 76px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .badge-top {
+      display: inline-block;
+      background: var(--rose-soft);
+      color: var(--rose);
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+    .badge-etc {
+      display: inline-block;
+      background: #f1f5f9;
+      color: var(--text-sub);
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+    .word-kr {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--text-main);
+    }
+    .col-count {
+      width: 80px;
+      text-align: center;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .col-en {
+      color: #1e293b;
+      font-weight: 500;
+    }
+    .col-vi {
+      color: var(--emerald);
+      font-weight: 600;
+    }
+    .col-ex {
+      color: var(--text-sub);
+      font-size: 13px;
+    }
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+  
+    /* Dasi Bom: spring palette */
+    :root {
+      --bg: #faf7ef; --surface: #fffdf8; --border: #dedbcc;
+      --text-main: #243a30; --text-sub: #505e54;
+      --accent: #356049; --accent-soft: #e4efe3;
+      --rose: #943e54; --rose-soft: #fae8eb; --emerald: #30634b;
+    }
+    header {
+      padding: clamp(20px, 5vw, 48px);
+      border: 1px solid var(--border); border-radius: 24px;
+      background: linear-gradient(115deg, #e5efe1, #fff9ef 58%, #f7e5e8);
+    }
+    h1 { font-size: clamp(22px, 4vw, 36px); word-break: keep-all; }
+    .stat-card, .controls, .table-wrap { border-radius: 16px; }
+    .stat-value { color: var(--accent); }
+    .tab-btn, .search-box input, .table-wrap { background: #fffefa; }
+    .tab-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .search-box input:focus { box-shadow: 0 0 0 3px #dce9da; }
+    thead th { background: var(--accent-soft); }
+    tbody tr:hover { background: #f1f6ee; }
+    @media (max-width: 600px) {
+      .search-box { flex-basis: 100%; max-width: none; }
+      .search-box input { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="brand-tag">KSTORYSONG.COM · 다시, 봄 OST VOCABULARY ARCHIVE</span>
+      <h1>《다시, 봄》 OST 12곡 전체 단어 빈도 분석 (214개 단어)</h1>
+      <p class="subtitle">AS-S01 ~ AS-S12 가사 전수 조사 · 빈도순위 1~100위 및 기타(101~214위) 한·영·베 학습 사전</p>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">분석 대상 곡 수</div>
+        <div class="stat-value">12곡</div>
+        <div class="stat-desc">AS-S01 우산 하나 ~ AS-S12 다시, 봄</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">총 고유 단어 수</div>
+        <div class="stat-value">214개</div>
+        <div class="stat-desc">조사·어미 제외 실질 표제어 기준</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">핵심 단어 (TOP 100)</div>
+        <div class="stat-value">100개</div>
+        <div class="stat-desc">서사 중심축 및 반복 핵심 어휘</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">기타 단어 (101~214위)</div>
+        <div class="stat-value">114개</div>
+        <div class="stat-desc">장면 디테일 및 단발성 표현 어휘</div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div class="tabs" id="filterTabs">
+        <button class="tab-btn active" data-filter="ALL">전체 보기 (214)</button>
+        <button class="tab-btn" data-filter="TOP 100">빈도순위 1~100위 (100)</button>
+        <button class="tab-btn" data-filter="ETC">기타순위 101~214위 (114)</button>
+      </div>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="한국어, 영어, 베트남어, 예문 검색..." />
+      </div>
+    </section>
+
+    <div class="result-info">
+      <span id="countDisplay">표시 중: 214개 단어</span>
+      <span>기준: 표제어(기본형) 및 주요 활용형 통합 집계</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="text-align:center;">순위</th>
+            <th>구분</th>
+            <th>단어 (주요 활용)</th>
+            <th style="text-align:center;">빈도</th>
+            <th>영어 (English)</th>
+            <th>베트남어 (Tiếng Việt)</th>
+            <th>가사 속 한 줄 (곡 번호)</th>
+          </tr>
+        </thead>
+        <tbody id="vocabBody"></tbody>
+      </table>
+    </div>
+
+    <footer>
+      © KStorySong · 《다시, 봄》 OST 12곡 가사 데이터 분석 프로젝트
+    </footer>
+  </div>
+
+  <script>
+    const VOCAB_DATA = [{"rank": 1, "group": "TOP 100", "word": "비 (비가, 비가 와)", "count": 31, "en": "rain", "vi": "mưa", "ex": "비가 올 때마다 보고 싶어요 (AS-S09)"}, {"rank": 2, "group": "TOP 100", "word": "우산 (우산을, 우산도)", "count": 22, "en": "umbrella", "vi": "ô (dù)", "ex": "우산 하나, 비가 와요 (AS-S01)"}, {"rank": 3, "group": "TOP 100", "word": "보다 (보고 싶어, 봐 봐)", "count": 21, "en": "to see / to miss", "vi": "nhìn, xem / nhớ", "ex": "보고 싶어, 매일 보고 싶어 (AS-S04)"}, {"rank": 4, "group": "TOP 100", "word": "오빠", "count": 18, "en": "older brother / honey", "vi": "anh (anh trai)", "ex": "오빠, 벚꽃 보러 같이 가자 (AS-S03)"}, {"rank": 5, "group": "TOP 100", "word": "나 (내가, 내, 나도)", "count": 17, "en": "I / me / my", "vi": "tôi / em / anh", "ex": "이번엔 내가 우산을 씌워 줄게 (AS-S11)"}, {"rank": 6, "group": "TOP 100", "word": "봄 (봄비, 봄날)", "count": 15, "en": "spring", "vi": "mùa xuân", "ex": "처음 만났던 봄, 함께 걸었던 봄 (AS-S08)"}, {"rank": 7, "group": "TOP 100", "word": "말 (말하다, 말할게)", "count": 14, "en": "word / to speak", "vi": "lời nói / nói", "ex": "나중에 꼭 말할게 (AS-S05)"}, {"rank": 8, "group": "TOP 100", "word": "우리", "count": 13, "en": "we / us / our", "vi": "chúng ta / chúng mình", "ex": "우리 다시 시작해 볼래? (AS-S12)"}, {"rank": 9, "group": "TOP 100", "word": "다시", "count": 12, "en": "again", "vi": "lại / một lần nữa", "ex": "다시, 봄, 다시 시작해 보자 (AS-S12)"}, {"rank": 10, "group": "TOP 100", "word": "벚꽃 (꽃잎, 꽃비)", "count": 11, "en": "cherry blossom", "vi": "hoa anh đào", "ex": "벚꽃이 피면 여기서 만나는 거야 (AS-S09)"}, {"rank": 11, "group": "TOP 100", "word": "하노이", "count": 10, "en": "Hanoi", "vi": "Hà Nội", "ex": "하노이에도 비가 와요 (AS-S09)"}, {"rank": 12, "group": "TOP 100", "word": "미안하다 (미안해)", "count": 9, "en": "to be sorry", "vi": "xin lỗi", "ex": "늦어서 미안해, 정말 미안해 (AS-S05)"}, {"rank": 13, "group": "TOP 100", "word": "지연 (지연아)", "count": 8, "en": "Ji-yeon (name)", "vi": "Ji-yeon (tên riêng)", "ex": "지연아, 나랑 사귈래? (AS-S04)"}, {"rank": 14, "group": "TOP 100", "word": "괜찮다 (괜찮아)", "count": 8, "en": "to be okay / fine", "vi": "không sao / ổn", "ex": "비가 와도 괜찮아 (AS-S11)"}, {"rank": 15, "group": "TOP 100", "word": "마음", "count": 7, "en": "heart / mind", "vi": "tấm lòng / trái tim", "ex": "같은 우산 아래 같은 마음 (AS-S04)"}, {"rank": 16, "group": "TOP 100", "word": "시간 (이 시간에)", "count": 7, "en": "time", "vi": "thời gian / giờ", "ex": "내일 이 시간, 여기서 만나요 (AS-S01)"}, {"rank": 17, "group": "TOP 100", "word": "너 (네가, 너의)", "count": 7, "en": "you / your", "vi": "em / anh / bạn", "ex": "기다리는 너를 두고 (AS-S05)"}, {"rank": 18, "group": "TOP 100", "word": "안녕", "count": 7, "en": "hello / goodbye", "vi": "xin chào / tạm biệt", "ex": "마지막 인사, 안녕 (AS-S08)"}, {"rank": 19, "group": "TOP 100", "word": "쓰다 (우산 쓰다/메시지 쓰다)", "count": 7, "en": "to use (umbrella) / to write", "vi": "che (ô) / viết", "ex": "쓰고 또 지우는 메시지 (AS-S10)"}, {"rank": 20, "group": "TOP 100", "word": "꿈", "count": 6, "en": "dream", "vi": "giấc mơ / ước mơ", "ex": "꿈을 꼭 지켜, 나도 내 꿈을 지킬게 (AS-S08)"}, {"rank": 21, "group": "TOP 100", "word": "사랑 (사랑해)", "count": 6, "en": "love / to love", "vi": "tình yêu / yêu", "ex": "사랑해, 지연아, 사랑해 (AS-S04)"}, {"rank": 22, "group": "TOP 100", "word": "기다리다 (기다릴게, 기다림)", "count": 6, "en": "to wait / waiting", "vi": "chờ đợi / đợi", "ex": "기다림도 사랑이야 (AS-S09)"}, {"rank": 23, "group": "TOP 100", "word": "책 (책방, 시집)", "count": 6, "en": "book / bookstore", "vi": "sách / hiệu sách", "ex": "나는 언젠가 내 책방을 열고 싶어 (AS-S04)"}, {"rank": 24, "group": "TOP 100", "word": "천 원", "count": 5, "en": "1,000 won", "vi": "một nghìn won", "ex": "존댓말 하면 벌금 천 원! (AS-S03)"}, {"rank": 25, "group": "TOP 100", "word": "가다 (가요, 갈게, 가자)", "count": 5, "en": "to go", "vi": "đi", "ex": "오빠, 벚꽃 보러 같이 가자 (AS-S03)"}, {"rank": 26, "group": "TOP 100", "word": "내일", "count": 5, "en": "tomorrow", "vi": "ngày mai", "ex": "내일 또 만나요 (AS-S01)"}, {"rank": 27, "group": "TOP 100", "word": "혼자", "count": 4, "en": "alone", "vi": "một mình", "ex": "우산 아래 나 혼자 (AS-S07)"}, {"rank": 28, "group": "TOP 100", "word": "무섭다 (무서워, 무서웠던)", "count": 4, "en": "to be scared / afraid", "vi": "sợ / đáng sợ", "ex": "오빠도 무서웠던 거잖아 (AS-S11)"}, {"rank": 29, "group": "TOP 100", "word": "끝 (끝나다)", "count": 4, "en": "end / to finish", "vi": "kết thúc / cuối cùng", "ex": "우리 끝난 게 아니었나 봐 (AS-S12)"}, {"rank": 30, "group": "TOP 100", "word": "씌우다 (씌워 줄게)", "count": 4, "en": "to hold an umbrella over", "vi": "che (ô) cho", "ex": "우산을 씌워 줄게 (AS-S11)"}, {"rank": 31, "group": "TOP 100", "word": "오늘 (오늘도)", "count": 4, "en": "today", "vi": "hôm nay", "ex": "오늘 너무 행복하다 (AS-S04)"}, {"rank": 32, "group": "TOP 100", "word": "잘하다 (잘했어, 잘 지내)", "count": 4, "en": "to do well / be well", "vi": "làm tốt / sống tốt", "ex": "잘했어, 오빠는 가야 돼 (AS-S07)"}, {"rank": 33, "group": "TOP 100", "word": "걸음", "count": 4, "en": "step", "vi": "bước chân", "ex": "한 걸음 또 한 걸음 (AS-S06)"}, {"rank": 34, "group": "TOP 100", "word": "편하다 (편하게, 편하지)", "count": 4, "en": "to be comfortable / casual", "vi": "thoải mái", "ex": "말 편하게 해도 돼? (AS-S03)"}, {"rank": 35, "group": "TOP 100", "word": "처음", "count": 4, "en": "first time / beginning", "vi": "lần đầu tiên", "ex": "처음 만난 그 정류장 (AS-S07)"}, {"rank": 36, "group": "TOP 100", "word": "정류장", "count": 4, "en": "bus stop", "vi": "trạm xe buýt", "ex": "비 오는 정류장 (AS-S07)"}, {"rank": 37, "group": "TOP 100", "word": "멈추다 (멈추자, 멈춰)", "count": 4, "en": "to stop / pause", "vi": "dừng lại", "ex": "오빠, 우리 잠깐 멈추자 (AS-S07)"}, {"rank": 38, "group": "TOP 100", "word": "지우다 (지워)", "count": 4, "en": "to erase / delete", "vi": "xóa", "ex": "'가지 마' 쓰고 또 지워 (AS-S08)"}, {"rank": 39, "group": "TOP 100", "word": "고맙다 (고마워, 고마웠어요)", "count": 3, "en": "to be thankful", "vi": "cảm ơn", "ex": "고마워, 정말 고마워 (AS-S12)"}, {"rank": 40, "group": "TOP 100", "word": "알다 (알았어요, 알 것 같아)", "count": 3, "en": "to know / understand", "vi": "biết / hiểu", "ex": "이제 알 것 같아, 오빠 진심 (AS-S10)"}, {"rank": 41, "group": "TOP 100", "word": "좋다 (좋아, 좋겠어)", "count": 3, "en": "to be good / like", "vi": "tốt / thích", "ex": "좋아, 우리 사귀자 (AS-S04)"}, {"rank": 42, "group": "TOP 100", "word": "믿다 (믿어, 믿었지)", "count": 3, "en": "to trust / believe", "vi": "tin tưởng", "ex": "응, 이제는 오빠를 믿어 (AS-S12)"}, {"rank": 43, "group": "TOP 100", "word": "슬프다 (슬퍼)", "count": 3, "en": "to be sad", "vi": "buồn", "ex": "말 안 하니까 더 슬퍼! (AS-S06)"}, {"rank": 44, "group": "TOP 100", "word": "잠깐 (잠깐만)", "count": 3, "en": "for a moment / wait", "vi": "một chút / khoan đã", "ex": "잠깐만요! 기다려 주세요 (AS-S01)"}, {"rank": 45, "group": "TOP 100", "word": "기억 (기억하다)", "count": 3, "en": "memory / to remember", "vi": "ký ức / nhớ", "ex": "화요일… 네, 기억할게요 (AS-S02)"}, {"rank": 46, "group": "TOP 100", "word": "하늘", "count": 3, "en": "sky", "vi": "bầu trời", "ex": "같은 날, 같은 하늘 아래 (AS-S09)"}, {"rank": 47, "group": "TOP 100", "word": "같다 (같아요, 같네요)", "count": 3, "en": "to be the same / seem", "vi": "giống nhau / có vẻ", "ex": "우리, 마음이 같네요 (AS-S03)"}, {"rank": 48, "group": "TOP 100", "word": "이해 (이해하다)", "count": 3, "en": "understanding / to understand", "vi": "sự thấu hiểu / hiểu", "ex": "지금은 이해할 수 있어 (AS-S11)"}, {"rank": 49, "group": "TOP 100", "word": "작다 (작은, 작고)", "count": 3, "en": "to be small", "vi": "nhỏ / bé", "ex": "작고 창문이 큰 책방 (AS-S10)"}, {"rank": 50, "group": "TOP 100", "word": "아침", "count": 2, "en": "morning", "vi": "buổi sáng", "ex": "아침에는 맑았는데 (AS-S01)"}, {"rank": 51, "group": "TOP 100", "word": "맑다 (맑았는데)", "count": 2, "en": "to be clear / sunny", "vi": "trong xanh / quang đãng", "ex": "아침에는 맑았는데 (AS-S01)"}, {"rank": 52, "group": "TOP 100", "word": "가방", "count": 2, "en": "bag", "vi": "túi xách / cặp", "ex": "가방에 책은 있어요 (AS-S01)"}, {"rank": 53, "group": "TOP 100", "word": "집", "count": 2, "en": "home / house", "vi": "nhà", "ex": "집까지 멀어요? 십 분 걸어요 (AS-S01)"}, {"rank": 54, "group": "TOP 100", "word": "십 분", "count": 2, "en": "ten minutes", "vi": "mười phút", "ex": "집까지 멀어요? 십 분 걸어요 (AS-S01)"}, {"rank": 55, "group": "TOP 100", "word": "뛰다 (뛰면)", "count": 2, "en": "to run", "vi": "chạy", "ex": "괜찮아요, 뛰면 돼요 (AS-S01)"}, {"rank": 56, "group": "TOP 100", "word": "사람", "count": 2, "en": "person / people", "vi": "người", "ex": "이름도 모르는 그 사람 (AS-S01)"}, {"rank": 57, "group": "TOP 100", "word": "손", "count": 2, "en": "hand", "vi": "bàn tay", "ex": "내 손에 우산을 주고 가요 (AS-S01)"}, {"rank": 58, "group": "TOP 100", "word": "주다 (주고)", "count": 2, "en": "to give", "vi": "đưa / cho", "ex": "내 손에 우산을 주고 가요 (AS-S01)"}, {"rank": 59, "group": "TOP 100", "word": "이르다 (일러/알려)", "count": 2, "en": "to tell / let know", "vi": "cho biết / nói", "ex": "이름이라도 알려 주세요 (AS-S01)"}, {"rank": 60, "group": "TOP 100", "word": "오다 (와요, 왔네요)", "count": 2, "en": "to come", "vi": "đến", "ex": "안녕하세요! 정말 왔네요 (AS-S02)"}, {"rank": 61, "group": "TOP 100", "word": "조심 (조심히)", "count": 2, "en": "carefully", "vi": "cẩn thận", "ex": "조심히 가세요 (AS-S01)"}, {"rank": 62, "group": "TOP 100", "word": "선물", "count": 2, "en": "gift / present", "vi": "món quà", "ex": "그리고 이거, 작은 선물이에요 (AS-S02)"}, {"rank": 63, "group": "TOP 100", "word": "작년", "count": 2, "en": "last year", "vi": "năm ngoái", "ex": "작년 봄에 핀 벚꽃이에요 (AS-S02)"}, {"rank": 64, "group": "TOP 100", "word": "얼굴", "count": 2, "en": "face", "vi": "khuôn mặt", "ex": "웃는 얼굴, 그 목소리 (AS-S02)"}, {"rank": 65, "group": "TOP 100", "word": "목소리", "count": 2, "en": "voice", "vi": "giọng nói", "ex": "웃는 얼굴, 그 목소리 (AS-S02)"}, {"rank": 66, "group": "TOP 100", "word": "설레다 (설레는)", "count": 2, "en": "to flutter / feel excited", "vi": "rung động / hồi hộp", "ex": "이게 설레는 건가요 (AS-S02)"}, {"rank": 67, "group": "TOP 100", "word": "소설", "count": 2, "en": "novel", "vi": "tiểu thuyết", "ex": "소설을 읽을까요, 시를 읽을까요? (AS-S02)"}, {"rank": 68, "group": "TOP 100", "word": "시", "count": 2, "en": "poem / poetry", "vi": "thơ", "ex": "소설을 읽을까요, 시를 읽을까요? (AS-S02)"}, {"rank": 69, "group": "TOP 100", "word": "펴다 (펴듯이, 펴 볼게요)", "count": 2, "en": "to open / unfold", "vi": "mở ra / giương (ô)", "ex": "비가 오면 우산을 펴듯이 (AS-S02)"}, {"rank": 70, "group": "TOP 100", "word": "다음", "count": 2, "en": "next time", "vi": "lần sau", "ex": "다음에 또 와도 될까요? (AS-S02)"}, {"rank": 71, "group": "TOP 100", "word": "화요일", "count": 2, "en": "Tuesday", "vi": "thứ Ba", "ex": "저는 화요일에만 쉬어요 (AS-S02)"}, {"rank": 72, "group": "TOP 100", "word": "봄날책방", "count": 2, "en": "Bomnal Bookstore", "vi": "Hiệu sách Ngày Xuân", "ex": "봄날책방, 봄비가 내리던 날 (AS-S02)"}, {"rank": 73, "group": "TOP 100", "word": "커피", "count": 2, "en": "coffee", "vi": "cà phê", "ex": "우리 커피 한잔할까요? (AS-S03)"}, {"rank": 74, "group": "TOP 100", "word": "민수", "count": 2, "en": "Min-su (name)", "vi": "Min-su (tên riêng)", "ex": "민수 씨는 취미가 뭐예요? (AS-S03)"}, {"rank": 75, "group": "TOP 100", "word": "취미", "count": 2, "en": "hobby", "vi": "sở thích", "ex": "민수 씨는 취미가 뭐예요? (AS-S03)"}, {"rank": 76, "group": "TOP 100", "word": "걷다 (걷는, 걸으면)", "count": 2, "en": "to walk", "vi": "đi bộ", "ex": "저는 걷는 것을 좋아해요 (AS-S03)"}, {"rank": 77, "group": "TOP 100", "word": "빗소리", "count": 2, "en": "sound of rain", "vi": "tiếng mưa", "ex": "저도 빗소리 듣는 것을 좋아해요 (AS-S03)"}, {"rank": 78, "group": "TOP 100", "word": "조용하다 (조용해져요)", "count": 2, "en": "to be quiet / calm", "vi": "yên tĩnh / bình yên", "ex": "비 올 때 걸으면 마음이 조용해져요 (AS-S03)"}, {"rank": 79, "group": "TOP 100", "word": "기분", "count": 2, "en": "mood / feeling", "vi": "tâm trạng", "ex": "기분이 안 좋을 때 뭐 해요? (AS-S03)"}, {"rank": 80, "group": "TOP 100", "word": "길", "count": 2, "en": "road / path", "vi": "con đường", "ex": "비, 책, 조용한 길 (AS-S03)"}, {"rank": 81, "group": "TOP 100", "word": "벌금", "count": 2, "en": "fine / penalty", "vi": "tiền phạt", "ex": "존댓말 하면 벌금 천 원! (AS-S03)"}, {"rank": 82, "group": "TOP 100", "word": "존댓말", "count": 2, "en": "honorific speech", "vi": "kính ngữ", "ex": "그게 벌써 존댓말이에요! (AS-S03)"}, {"rank": 83, "group": "TOP 100", "word": "살", "count": 2, "en": "age (years old)", "vi": "tuổi", "ex": "하나 물어봐도 돼요? 몇 살이에요? (AS-S03)"}, {"rank": 84, "group": "TOP 100", "word": "뜨겁다 (뜨거워)", "count": 2, "en": "to be hot / blushing", "vi": "nóng / đỏ bừng", "ex": "하나도 안 편해, 얼굴이 뜨거워 (AS-S03)"}, {"rank": 85, "group": "TOP 100", "word": "가깝다 (가까워진, 가까운데)", "count": 2, "en": "to be close / near", "vi": "gần gũi / gần", "ex": "가까운데 너무 멀어 (AS-S06)"}, {"rank": 86, "group": "TOP 100", "word": "분홍색", "count": 2, "en": "pink color", "vi": "màu hồng", "ex": "하늘이 다 분홍색이야 (AS-S04)"}, {"rank": 87, "group": "TOP 100", "word": "나라", "count": 2, "en": "country", "vi": "đất nước", "ex": "언젠가 다른 나라에서 일해 보고 싶어 (AS-S04)"}, {"rank": 88, "group": "TOP 100", "word": "일", "count": 2, "en": "work / job", "vi": "công việc", "ex": "일이 안 끝나서 못 갈 것 같아 (AS-S05)"}, {"rank": 89, "group": "TOP 100", "word": "매일", "count": 2, "en": "every day", "vi": "mỗi ngày", "ex": "매일 아침 책갈피 보고 일한대 (AS-S10)"}, {"rank": 90, "group": "TOP 100", "word": "아래", "count": 2, "en": "under / beneath", "vi": "dưới", "ex": "같은 우산 아래 같은 마음 (AS-S04)"}, {"rank": 91, "group": "TOP 100", "word": "모레", "count": 2, "en": "day after tomorrow", "vi": "ngày kia", "ex": "내일도, 모레도, 비가 와도, 안 와도 (AS-S04)"}, {"rank": 92, "group": "TOP 100", "word": "고백", "count": 2, "en": "confession", "vi": "lời tỏ tình", "ex": "오빠, 그거 고백이야? (AS-S04)"}, {"rank": 93, "group": "TOP 100", "word": "연습", "count": 2, "en": "practice", "vi": "luyện tập", "ex": "연습 많이 했는데 다 잊어버렸어 (AS-S04)"}, {"rank": 94, "group": "TOP 100", "word": "사귀다 (사귈래, 사귀자)", "count": 2, "en": "to date / go out with", "vi": "hẹn hò / yêu nhau", "ex": "지연아, 나랑 사귈래? (AS-S04)"}, {"rank": 95, "group": "TOP 100", "word": "도착 (도착했어)", "count": 2, "en": "arrival / arrived", "vi": "đến nơi", "ex": "오빠, 나 도착했어, 천천히 와 (AS-S05)"}, {"rank": 96, "group": "TOP 100", "word": "또", "count": 1, "en": "again / also", "vi": "lại / nữa", "ex": "내일 또 만나요 (AS-S01)"}, {"rank": 97, "group": "TOP 100", "word": "만나다 (만나요)", "count": 1, "en": "to meet", "vi": "gặp gỡ", "ex": "내일 이 시간, 여기서 만나요 (AS-S01)"}, {"rank": 98, "group": "TOP 100", "word": "시집", "count": 1, "en": "poetry collection", "vi": "tập thơ", "ex": "이 시집은 어때요? 제목이 '봄비'예요 (AS-S02)"}, {"rank": 99, "group": "TOP 100", "word": "봄비", "count": 1, "en": "spring rain", "vi": "mưa xuân", "ex": "봄비가 내리던 날 (AS-S02)"}, {"rank": 100, "group": "TOP 100", "word": "조금", "count": 1, "en": "a little", "vi": "một chút", "ex": "마음도 조금 펴 보세요 (AS-S02)"}, {"rank": 101, "group": "기타 (101~214)", "word": "어떡하다", "count": 1, "en": "what to do", "vi": "làm sao đây", "ex": "어떡하지? 우산이 없어요 (AS-S01)"}, {"rank": 102, "group": "기타 (101~214)", "word": "그런데", "count": 1, "en": "by the way / however", "vi": "nhưng mà / tuy nhiên", "ex": "그런데 우산은 없어요 (AS-S01)"}, {"rank": 103, "group": "기타 (101~214)", "word": "멀다", "count": 1, "en": "to be far", "vi": "xa", "ex": "집까지 멀어요? 십 분 걸어요 (AS-S01)"}, {"rank": 104, "group": "기타 (101~214)", "word": "그게", "count": 1, "en": "that is / well...", "vi": "cái đó / à thì...", "ex": "그게… 저기… 아, 아니에요 (AS-S01)"}, {"rank": 105, "group": "기타 (101~214)", "word": "저기", "count": 1, "en": "excuse me / over there", "vi": "này / đằng kia", "ex": "저기요! 이거 쓰세요 (AS-S01)"}, {"rank": 106, "group": "기타 (101~214)", "word": "하나", "count": 1, "en": "one", "vi": "một", "ex": "우산 하나, 비가 와요 (AS-S01)"}, {"rank": 107, "group": "기타 (101~214)", "word": "이거", "count": 1, "en": "this", "vi": "cái này", "ex": "저기요! 이거 쓰세요 (AS-S01)"}, {"rank": 108, "group": "기타 (101~214)", "word": "그쪽", "count": 1, "en": "you / that side", "vi": "bên đó / đằng ấy", "ex": "아니에요, 괜찮아요! 그쪽은요? (AS-S01)"}, {"rank": 109, "group": "기타 (101~214)", "word": "이름", "count": 1, "en": "name", "vi": "tên", "ex": "이름이라도 알려 주세요 (AS-S01)"}, {"rank": 110, "group": "기타 (101~214)", "word": "한지연", "count": 1, "en": "Han Ji-yeon (full name)", "vi": "Han Ji-yeon", "ex": "저는 한지연이라고 해요 (AS-S02)"}, {"rank": 111, "group": "기타 (101~214)", "word": "김민수", "count": 1, "en": "Kim Min-su (full name)", "vi": "Kim Min-su", "ex": "저는 김민수라고 해요 (AS-S02)"}, {"rank": 112, "group": "기타 (101~214)", "word": "그날", "count": 1, "en": "that day", "vi": "ngày hôm đó", "ex": "그날이 자꾸 생각나요 (AS-S02)"}, {"rank": 113, "group": "기타 (101~214)", "word": "웃다", "count": 1, "en": "to smile / laugh", "vi": "cười", "ex": "웃는 얼굴, 그 목소리 (AS-S02)"}, {"rank": 114, "group": "기타 (101~214)", "word": "한잔", "count": 1, "en": "a cup / drink", "vi": "một ly / một tách", "ex": "우리 커피 한잔할까요? (AS-S03)"}, {"rank": 115, "group": "기타 (101~214)", "word": "씨", "count": 1, "en": "Mr. / Ms.", "vi": "anh / chị / bạn", "ex": "민수 씨는 취미가 뭐예요? (AS-S03)"}, {"rank": 116, "group": "기타 (101~214)", "word": "빼다", "count": 1, "en": "to remove / drop", "vi": "bỏ ra", "ex": "'씨' 빼고 불러 줘 (AS-S03)"}, {"rank": 117, "group": "기타 (101~214)", "word": "부르다", "count": 1, "en": "to call", "vi": "gọi", "ex": "이렇게 부르니까 좀 가까워진 것 같아 (AS-S03)"}, {"rank": 118, "group": "기타 (101~214)", "word": "물어보다", "count": 1, "en": "to ask", "vi": "hỏi", "ex": "하나 물어봐도 돼요? 몇 살이에요? (AS-S03)"}, {"rank": 119, "group": "기타 (101~214)", "word": "몇", "count": 1, "en": "how many / what", "vi": "mấy / bao nhiêu", "ex": "하나 물어봐도 돼요? 몇 살이에요? (AS-S03)"}, {"rank": 120, "group": "기타 (101~214)", "word": "방금", "count": 1, "en": "just now", "vi": "vừa mới", "ex": "천 원! 방금 '요' 했어! (AS-S03)"}, {"rank": 121, "group": "기타 (101~214)", "word": "하하", "count": 1, "en": "haha (laughter)", "vi": "ha ha", "ex": "천 원! 하하, 잘했어! (AS-S03)"}, {"rank": 122, "group": "기타 (101~214)", "word": "사진", "count": 1, "en": "photo", "vi": "bức ảnh", "ex": "봄비 말고 꽃비네! 오빠, 사진 찍자 (AS-S04)"}, {"rank": 123, "group": "기타 (101~214)", "word": "찍다", "count": 1, "en": "to take (a photo)", "vi": "chụp (ảnh)", "ex": "오빠, 사진 찍자 (AS-S04)"}, {"rank": 124, "group": "기타 (101~214)", "word": "언젠가", "count": 1, "en": "someday", "vi": "một ngày nào đó", "ex": "언젠가 다른 나라에서 일해 보고 싶어 (AS-S04)"}, {"rank": 125, "group": "기타 (101~214)", "word": "다른", "count": 1, "en": "other / different", "vi": "khác", "ex": "언젠가 다른 나라에서 일해 보고 싶어 (AS-S04)"}, {"rank": 126, "group": "기타 (101~214)", "word": "내년", "count": 1, "en": "next year", "vi": "năm sau", "ex": "내년 봄에도 여기 같이 오기로 해 (AS-S04)"}, {"rank": 127, "group": "기타 (101~214)", "word": "약속", "count": 1, "en": "promise", "vi": "lời hứa", "ex": "내년 봄에도 여기 같이 오기로 해 (AS-S04)"}, {"rank": 128, "group": "기타 (101~214)", "word": "행복하다", "count": 1, "en": "to be happy", "vi": "hạnh phúc", "ex": "오늘 너무 행복하다 (AS-S04)"}, {"rank": 129, "group": "기타 (101~214)", "word": "아홉 시 반", "count": 1, "en": "nine-thirty", "vi": "chín giờ rưỡi", "ex": "아홉 시 반, 답장이 없어 (AS-S05)"}, {"rank": 130, "group": "기타 (101~214)", "word": "답장", "count": 1, "en": "reply", "vi": "tin nhắn trả lời", "ex": "늦은 답장, 늦은 나 (AS-S05)"}, {"rank": 131, "group": "기타 (101~214)", "word": "시계", "count": 1, "en": "clock / watch", "vi": "đồng hồ", "ex": "일하느라고 시계도 못 봤어 (AS-S05)"}, {"rank": 132, "group": "기타 (101~214)", "word": "화", "count": 1, "en": "anger", "vi": "cơn giận", "ex": "화 안 났어, 그냥 조금 서운해 (AS-S05)"}, {"rank": 133, "group": "기타 (101~214)", "word": "서운하다", "count": 1, "en": "to feel hurt / disappointed", "vi": "tủi thân / hụt hẫng", "ex": "화 안 났어, 그냥 조금 서운해 (AS-S05)"}, {"rank": 134, "group": "기타 (101~214)", "word": "늦다", "count": 1, "en": "to be late", "vi": "muộn / trễ", "ex": "늦어서 미안해, 정말 미안해 (AS-S05)"}, {"rank": 135, "group": "기타 (101~214)", "word": "두다", "count": 1, "en": "to leave behind", "vi": "để lại", "ex": "기다리는 너를 두고 (AS-S05)"}, {"rank": 136, "group": "기타 (101~214)", "word": "지사", "count": 1, "en": "branch office", "vi": "chi nhánh", "ex": "나, 하노이 지사에 가게 될 수도 있어 (AS-S05)"}, {"rank": 137, "group": "기타 (101~214)", "word": "만약", "count": 1, "en": "if / in case", "vi": "nếu như", "ex": "만약에, 내가 멀리 가게 되면… (AS-S05)"}, {"rank": 138, "group": "기타 (101~214)", "word": "멀리", "count": 1, "en": "far away", "vi": "xa xôi", "ex": "만약에, 내가 멀리 가게 되면… (AS-S05)"}, {"rank": 139, "group": "기타 (101~214)", "word": "나중", "count": 1, "en": "later", "vi": "sau này", "ex": "나중에 꼭 말할게 (AS-S05)"}, {"rank": 140, "group": "기타 (101~214)", "word": "꼭", "count": 1, "en": "surely / definitely", "vi": "nhất định", "ex": "나중에 꼭 말할게 (AS-S05)"}, {"rank": 141, "group": "기타 (101~214)", "word": "한 달", "count": 1, "en": "one month", "vi": "một tháng", "ex": "한 달 동안 나만 몰랐어 (AS-S06)"}, {"rank": 142, "group": "기타 (101~214)", "word": "출장", "count": 1, "en": "business trip", "vi": "chuyến công tác", "ex": "출장이라고 했어, 거짓말한 거야 (AS-S06)"}, {"rank": 143, "group": "기타 (101~214)", "word": "거짓말", "count": 1, "en": "lie", "vi": "lời nói dối", "ex": "출장이라고 했어, 거짓말한 거야 (AS-S06)"}, {"rank": 144, "group": "기타 (101~214)", "word": "오해", "count": 1, "en": "misunderstanding", "vi": "hiểu lầm", "ex": "오해일 수도 있어, 직접 물어봐 (AS-S06)"}, {"rank": 145, "group": "기타 (101~214)", "word": "직접", "count": 1, "en": "directly / in person", "vi": "trực tiếp", "ex": "이번엔 내가 직접 말할 거야 (AS-S10)"}, {"rank": 146, "group": "기타 (101~214)", "word": "도시", "count": 1, "en": "city", "vi": "thành phố", "ex": "같은 도시, 같은 비 (AS-S06)"}, {"rank": 147, "group": "기타 (101~214)", "word": "사이", "count": 1, "en": "between / relationship", "vi": "mối quan hệ / giữa", "ex": "우리 사이, 멀어지는 거리 (AS-S06)"}, {"rank": 148, "group": "기타 (101~214)", "word": "맨날", "count": 1, "en": "always / every day", "vi": "suốt ngày", "ex": "오빠는 맨날 괜찮대 (AS-S06)"}, {"rank": 149, "group": "기타 (101~214)", "word": "응원", "count": 1, "en": "cheering / support", "vi": "cổ vũ / ủng hộ", "ex": "나는 그 꿈을 같이 응원할 수 있었어 (AS-S06)"}, {"rank": 150, "group": "기타 (101~214)", "word": "바보", "count": 1, "en": "fool / dummy", "vi": "đồ ngốc", "ex": "바보, 우산은 왜 두고 가 (AS-S06)"}, {"rank": 151, "group": "기타 (101~214)", "word": "일 년", "count": 1, "en": "one year", "vi": "một năm", "ex": "일 년 동안 혼자 (AS-S07)"}, {"rank": 152, "group": "기타 (101~214)", "word": "평생", "count": 1, "en": "whole life / forever", "vi": "cả đời", "ex": "안 가면 평생 후회할 것 같아 (AS-S07)"}, {"rank": 153, "group": "기타 (101~214)", "word": "후회", "count": 1, "en": "regret", "vi": "hối hận", "ex": "안 가면 평생 후회할 것 같아 (AS-S07)"}, {"rank": 154, "group": "기타 (101~214)", "word": "모르다", "count": 1, "en": "to not know", "vi": "không biết", "ex": "모르겠어, 그게 제일 무서워 (AS-S07)"}, {"rank": 155, "group": "기타 (101~214)", "word": "저녁", "count": 1, "en": "evening", "vi": "buổi tối", "ex": "저녁 일곱 시 십 분 (AS-S07)"}, {"rank": 156, "group": "기타 (101~214)", "word": "일곱 시 십 분", "count": 1, "en": "seven-ten", "vi": "bảy giờ mười phút", "ex": "저녁 일곱 시 십 분 (AS-S07)"}, {"rank": 157, "group": "기타 (101~214)", "word": "자리", "count": 1, "en": "place / spot", "vi": "vị trí / chỗ", "ex": "처음 만난 그 자리 (AS-S07)"}, {"rank": 158, "group": "기타 (101~214)", "word": "헤어지다", "count": 1, "en": "to break up / part", "vi": "chia tay", "ex": "그게… 헤어지자는 거야? (AS-S07)"}, {"rank": 159, "group": "기타 (101~214)", "word": "마지막", "count": 1, "en": "the last / final", "vi": "cuối cùng", "ex": "마지막이라고 하지 마 (AS-S07)"}, {"rank": 160, "group": "기타 (101~214)", "word": "연락", "count": 1, "en": "contact", "vi": "liên lạc", "ex": "연락은 안 하기로 했어 (AS-S08)"}, {"rank": 161, "group": "기타 (101~214)", "word": "붙잡다", "count": 1, "en": "to hold back", "vi": "níu giữ", "ex": "가면 붙잡을 것 같아 (AS-S08)"}, {"rank": 162, "group": "기타 (101~214)", "word": "비행기", "count": 1, "en": "airplane", "vi": "máy bay", "ex": "비행기 타기 전에 열지 마 (AS-S08)"}, {"rank": 163, "group": "기타 (101~214)", "word": "타다", "count": 1, "en": "to board / ride", "vi": "lên (máy bay/xe)", "ex": "비행기 타기 전에 열지 마 (AS-S08)"}, {"rank": 164, "group": "기타 (101~214)", "word": "전", "count": 1, "en": "before", "vi": "trước khi", "ex": "비행기 타기 전에 열지 마 (AS-S08)"}, {"rank": 165, "group": "기타 (101~214)", "word": "열다", "count": 1, "en": "to open", "vi": "mở", "ex": "비행기 타기 전에 열지 마 (AS-S08)"}, {"rank": 166, "group": "기타 (101~214)", "word": "밥", "count": 1, "en": "meal / rice", "vi": "cơm / bữa ăn", "ex": "밥 잘 먹고, 비 오는 날에는 우산 꼭 챙겨 (AS-S08)"}, {"rank": 167, "group": "기타 (101~214)", "word": "챙기다", "count": 1, "en": "to take care / pack", "vi": "mang theo / chăm sóc", "ex": "비 오는 날에는 우산 꼭 챙겨 (AS-S08)"}, {"rank": 168, "group": "기타 (101~214)", "word": "아프다", "count": 1, "en": "to be sick / hurt", "vi": "ốm / đau", "ex": "잘 다녀와, 아프지 마 (AS-S08)"}, {"rank": 169, "group": "기타 (101~214)", "word": "인사", "count": 1, "en": "greeting / farewell", "vi": "lời chào", "ex": "마지막 인사, 안녕 (AS-S08)"}, {"rank": 170, "group": "기타 (101~214)", "word": "한마디", "count": 1, "en": "a single word", "vi": "một lời", "ex": "'잘 지내' 한마디만 (AS-S08)"}, {"rank": 171, "group": "기타 (101~214)", "word": "진짜", "count": 1, "en": "really / real", "vi": "thật sự", "ex": "나 진짜 이상하게 웃었네 (AS-S08)"}, {"rank": 172, "group": "기타 (101~214)", "word": "이상하다", "count": 1, "en": "to be strange", "vi": "kỳ lạ", "ex": "그런데 이상해요 (AS-S09)"}, {"rank": 173, "group": "기타 (101~214)", "word": "지키다", "count": 1, "en": "to keep / protect", "vi": "giữ gìn / bảo vệ", "ex": "꿈을 꼭 지켜, 나도 내 꿈을 지킬게 (AS-S08)"}, {"rank": 174, "group": "기타 (101~214)", "word": "책갈피", "count": 1, "en": "bookmark", "vi": "kẹp sách", "ex": "매일 아침 책갈피 보고 일한대 (AS-S10)"}, {"rank": 175, "group": "기타 (101~214)", "word": "두 개", "count": 1, "en": "two items", "vi": "hai cái", "ex": "책갈피가 두 개가 됐네 (AS-S08)"}, {"rank": 176, "group": "기타 (101~214)", "word": "함께", "count": 1, "en": "together", "vi": "cùng nhau", "ex": "처음 만났던 봄, 함께 걸었던 봄 (AS-S08)"}, {"rank": 177, "group": "기타 (101~214)", "word": "돌려주다", "count": 1, "en": "to return / give back", "vi": "trả lại", "ex": "이 우산은 돌려주지도 못했네 (AS-S08)"}, {"rank": 178, "group": "기타 (101~214)", "word": "가랑비", "count": 1, "en": "drizzle", "vi": "mưa phùn", "ex": "하노이의 비, 가랑비 (AS-S09)"}, {"rank": 179, "group": "기타 (101~214)", "word": "소리", "count": 1, "en": "sound", "vi": "âm thanh / tiếng", "ex": "소리 없이 내려요 (AS-S09)"}, {"rank": 180, "group": "기타 (101~214)", "word": "눈", "count": 1, "en": "eye", "vi": "mắt", "ex": "'보고 있어요'는 지금 눈으로 보는 거예요 (AS-S09)"}, {"rank": 181, "group": "기타 (101~214)", "word": "그리움", "count": 1, "en": "longing / missing", "vi": "nỗi nhớ", "ex": "그리운 사람은 '보고 싶어요' (AS-S09)"}, {"rank": 182, "group": "기타 (101~214)", "word": "큰일", "count": 1, "en": "big trouble", "vi": "chuyện lớn", "ex": "그럼 하노이는 큰일이에요 (AS-S09)"}, {"rank": 183, "group": "기타 (101~214)", "word": "서울", "count": 1, "en": "Seoul", "vi": "Seoul", "ex": "서울은 지금 벚꽃이 피고 있겠다 (AS-S09)"}, {"rank": 184, "group": "기타 (101~214)", "word": "벤치", "count": 1, "en": "bench", "vi": "ghế băng", "ex": "꽃잎이 비처럼 내리던 그 벤치 (AS-S09)"}, {"rank": 185, "group": "기타 (101~214)", "word": "거기", "count": 1, "en": "there", "vi": "ở đó", "ex": "거기도 봄이야? 여기는 비가 와 (AS-S09)"}, {"rank": 186, "group": "기타 (101~214)", "word": "공항", "count": 1, "en": "airport", "vi": "sân bay", "ex": "오빠, 그날 공항에 갈 걸 그랬어 (AS-S10)"}, {"rank": 187, "group": "기타 (101~214)", "word": "보내다", "count": 1, "en": "to send / let go", "vi": "gửi / tiễn", "ex": "보내지 못한 메시지 (AS-S10)"}, {"rank": 188, "group": "기타 (101~214)", "word": "다르다", "count": 1, "en": "to be different", "vi": "khác biệt", "ex": "보내면 뭐가 달라져 (AS-S10)"}, {"rank": 189, "group": "기타 (101~214)", "word": "메시지", "count": 1, "en": "message", "vi": "tin nhắn", "ex": "쓰고 또 지우는 메시지 (AS-S10)"}, {"rank": 190, "group": "기타 (101~214)", "word": "한 번", "count": 1, "en": "once", "vi": "một lần", "ex": "한 번만, 딱 한 번만 (AS-S10)"}, {"rank": 191, "group": "기타 (101~214)", "word": "아침마다", "count": 1, "en": "every morning", "vi": "mỗi buổi sáng", "ex": "매일 아침 책갈피 보고 일한대 (AS-S10)"}, {"rank": 192, "group": "기타 (101~214)", "word": "진심", "count": 1, "en": "sincerity / true heart", "vi": "tấm lòng chân thành", "ex": "이제 알 것 같아, 오빠 진심 (AS-S10)"}, {"rank": 193, "group": "기타 (101~214)", "word": "창문", "count": 1, "en": "window", "vi": "cửa sổ", "ex": "작고 창문이 큰 책방 (AS-S10)"}, {"rank": 194, "group": "기타 (101~214)", "word": "돌아오다", "count": 1, "en": "to come back", "vi": "quay trở về", "ex": "오빠가 돌아왔을 때 부끄럽지 않으려고 (AS-S10)"}, {"rank": 195, "group": "기타 (101~214)", "word": "부끄럽다", "count": 1, "en": "to be ashamed / embarrassed", "vi": "xấu hổ / ngại ngùng", "ex": "오빠가 돌아왔을 때 부끄럽지 않으려고 (AS-S10)"}, {"rank": 196, "group": "기타 (101~214)", "word": "이번", "count": 1, "en": "this time", "vi": "lần này", "ex": "이리 와, 이번엔 내가 (AS-S11)"}, {"rank": 197, "group": "기타 (101~214)", "word": "이 년", "count": 1, "en": "two years", "vi": "hai năm", "ex": "하노이 간 지 벌써 이 년이 됐네 (AS-S11)"}, {"rank": 198, "group": "기타 (101~214)", "word": "봄비책방", "count": 1, "en": "Bombi Bookstore", "vi": "Hiệu sách Mưa Xuân", "ex": "그 정류장에서 두 걸음, '봄비책방' (AS-S11)"}, {"rank": 199, "group": "기타 (101~214)", "word": "며칠", "count": 1, "en": "what date / a few days", "vi": "ngày mấy / vài ngày", "ex": "오늘이 며칠이지? 삼월 삼십일 (AS-S11)"}, {"rank": 200, "group": "기타 (101~214)", "word": "삼월 삼십일", "count": 1, "en": "March 31st", "vi": "ngày 31 tháng 3", "ex": "오늘이 며칠이지? 삼월 삼십일 (AS-S11)"}, {"rank": 201, "group": "기타 (101~214)", "word": "서다", "count": 1, "en": "to stand", "vi": "đứng", "ex": "여기 서 있으면 만날 수 있을 것 같아서 (AS-S11)"}, {"rank": 202, "group": "기타 (101~214)", "word": "이리", "count": 1, "en": "this way / come here", "vi": "lại đây", "ex": "이리 와, 이번엔 내가 (AS-S11)"}, {"rank": 203, "group": "기타 (101~214)", "word": "들어오다", "count": 1, "en": "to come in", "vi": "vào trong", "ex": "들어올래? 차 한잔 끓여 줄게 (AS-S11)"}, {"rank": 204, "group": "기타 (101~214)", "word": "차", "count": 1, "en": "tea", "vi": "trà", "ex": "들어올래? 차 한잔 끓여 줄게 (AS-S11)"}, {"rank": 205, "group": "기타 (101~214)", "word": "끓이다", "count": 1, "en": "to boil / brew", "vi": "pha (trà) / đun", "ex": "들어올래? 차 한잔 끓여 줄게 (AS-S11)"}, {"rank": 206, "group": "기타 (101~214)", "word": "앞", "count": 1, "en": "front / future", "vi": "phía trước / sau này", "ex": "앞으로는 말하기로 했어 (AS-S12)"}, {"rank": 207, "group": "기타 (101~214)", "word": "좋은", "count": 1, "en": "good", "vi": "tốt đẹp", "ex": "좋은 일도 무서운 일도 (AS-S12)"}, {"rank": 208, "group": "기타 (101~214)", "word": "시작", "count": 1, "en": "start / beginning", "vi": "bắt đầu", "ex": "다시 시작해 보자 (AS-S12)"}, {"rank": 209, "group": "기타 (101~214)", "word": "세 번째", "count": 1, "en": "the third", "vi": "thứ ba", "ex": "오빠, 손 줘 봐, 세 번째 책갈피야 (AS-S12)"}, {"rank": 210, "group": "기타 (101~214)", "word": "성장", "count": 1, "en": "growth", "vi": "sự trưởng thành", "ex": "서로를 이해할 만큼 성장할 때까지 (AS-S12)"}, {"rank": 211, "group": "기타 (101~214)", "word": "잠시", "count": 1, "en": "for a while", "vi": "tạm thời / một lát", "ex": "잠시 멈추어 있는 것뿐이다 (AS-S12)"}, {"rank": 212, "group": "기타 (101~214)", "word": "번갈아", "count": 1, "en": "taking turns", "vi": "luân phiên / thay phiên", "ex": "번갈아 가면서, 함께 (AS-S12)"}, {"rank": 213, "group": "기타 (101~214)", "word": "이야기", "count": 1, "en": "story / talk", "vi": "câu chuyện", "ex": "날씨 얘기는 이상해 (AS-S10)"}, {"rank": 214, "group": "기타 (101~214)", "word": "제목", "count": 1, "en": "title", "vi": "tiêu đề / tên sách", "ex": "이 시집은 어때요? 제목이 '봄비'예요 (AS-S02)"}];
+
+    let currentFilter = 'ALL';
+    let currentQuery = '';
+
+    const tbody = document.getElementById('vocabBody');
+    const countDisplay = document.getElementById('countDisplay');
+    const searchInput = document.getElementById('searchInput');
+    const tabButtons = document.querySelectorAll('.tab-btn');
+
+    function renderTable() {
+      const q = currentQuery.trim().toLowerCase();
+      const filtered = VOCAB_DATA.filter(item => {
+        const matchTab =
+          currentFilter === 'ALL' ||
+          (currentFilter === 'TOP 100' && item.rank <= 100) ||
+          (currentFilter === 'ETC' && item.rank > 100);
+        if (!matchTab) return false;
+        if (!q) return true;
+        return (
+          item.word.toLowerCase().includes(q) ||
+          item.en.toLowerCase().includes(q) ||
+          item.vi.toLowerCase().includes(q) ||
+          item.ex.toLowerCase().includes(q) ||
+          String(item.rank) === q
+        );
+      });
+
+      countDisplay.textContent = `표시 중: ${filtered.length}개 단어`;
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; padding:32px; color:#64748b;">검색 결과가 없습니다.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(item => {
+        const badgeClass = item.rank <= 100 ? 'badge-top' : 'badge-etc';
+        const groupLabel = item.rank <= 100 ? 'TOP 100' : '기타';
+        return `
+          <tr>
+            <td class="col-rank">${item.rank}</td>
+            <td><span class="${badgeClass}">${groupLabel}</span></td>
+            <td class="word-kr">${item.word}</td>
+            <td class="col-count">${item.count}회</td>
+            <td class="col-en">${item.en}</td>
+            <td class="col-vi">${item.vi}</td>
+            <td class="col-ex">${item.ex}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        renderTable();
+      });
+    });
+
+    searchInput.addEventListener('input', (e) => {
+      currentQuery = e.target.value;
+      renderTable();
+    });
+
+    renderTable();
+  </script>
+</body>
+</html>
