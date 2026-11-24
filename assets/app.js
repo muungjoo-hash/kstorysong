@@ -65,7 +65,7 @@ if(D.departments){const io=eps.filter(e=>e.intro);if(io.length)h+='<div class="g
 else h+='<div class="grid" style="margin-top:16px">'+eps.map(e=>epCard(sid,e,s.color)).join('')+'</div>';
 if(D.extras)h+='<h2>'+t('extra')+'</h2><div class="grid">'+D.extras.map(x=>'<a class="card ep" href="#/v/'+x.youtube.lecture[vlang()]+'"><h4>'+esc(T(x.title))+'</h4></a>').join('')+'</div>';
 if(D.songs)h+='<h2>OST</h2><div class="grid">'+D.songs.map(x=>'<a class="card ep" style="--c:'+s.color+'" href="#/v/'+x.youtube.ost[vlang()]+'"><span class="no">♪ '+String(x.no).padStart(2,'0')+' · EP '+x.episodes.join('-')+'</span><h4>'+esc(x.title[vlang()])+'</h4></a>').join('')+'</div>';
-if(sid==='dasibom'&&D.songs)h+='<div class="row" style="margin-top:16px"><a class="btn" href="lessons/dasibom/dasi_bom_vocab_214.html">'+({ko:'OST 단어장 · 214단어',en:'OST Vocabulary · 214 words',vn:'Từ vựng OST · 214 từ'}[L])+'</a></div>';
+if(sid==='dasibom'&&D.songs)h+='<div class="row" style="margin-top:16px"><a class="btn" href="lessons/dasibom/dasi_bom_vocab_214.html"><span aria-hidden="true">&#128073;</span> '+({ko:'OST 단어장 · 214단어',en:'OST Vocabulary · 214 words',vn:'Từ vựng OST · 214 từ'}[L])+'</a></div><p class="mut" style="margin-top:6px">'+({ko:'여기를 눌러서 단어를 보세요',en:'Click here to see the vocabulary',vn:'Bấm vào đây để xem từ vựng'}[L])+'</p>';
 app.innerHTML=h;bindcl()}
 async function videoPage(id){app.innerHTML='<div class="crumb"><a href="#/">'+t('home')+'</a></div>'+embed(id)}
 async function epPage(sid,eid){const S=await J('data/series.json');const s=S.series.find(x=>x.id===sid);const D=await J(s.file);const i=D.episodes.findIndex(e=>e.id===eid);const e=D.episodes[i];if(!e)return home();
