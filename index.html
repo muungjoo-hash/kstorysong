@@ -2,7 +2,12 @@
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>K-Story Song · 이야기와 노래로 배우는 한국어</title>
 <meta name="description" content="Learn Korean through stories and songs. 한글, 공장한국어, 다시 봄.">
-<link rel="stylesheet" href="assets/style.css?v=202611222330"></head>
+<link rel="stylesheet" href="assets/style.css?v=202611222330"><style>
+#jukebox-preview ol li {font-size:14px;line-height:1.45;display:flex;align-items:center;gap:5px;}
+#jukebox-preview ol li > span {min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+#jukebox-preview ol li > button.btn {flex:none;font-size:12px;line-height:1.2;padding:3px 7px;min-height:25px;white-space:nowrap;}
+</style>
+</head>
 <body>
 <header class="nav"><a class="brand" href="#/">K<span>Story</span>Song</a>
 <nav><a href="#/">Home</a><a href="#/guide">Guide</a><a href="#/board">Board</a><a href="#/library">Library</a></nav>
@@ -10,4 +15,41 @@
 <button id="theme" aria-label="theme">◐</button><button id="login" class="btn small">Google 로그인</button></div></header>
 <main id="app"></main>
 <footer><p>© K-Story Song · <a href="https://www.youtube.com/@alexjoo8303" target="_blank" rel="noopener">YouTube @alexjoo8303</a></p><p class="mut">Voices, images and songs are AI-assisted. Translations are reviewed by native speakers where noted.</p></footer>
-<script src="assets/data.js?v=202611222330"></script><script src="assets/config.js"></script><script src="assets/app.js?v=20261124-vocab-guide"></script></body></html>
+<script src="assets/data.js?v=202611222330"></script><script src="assets/config.js"></script><script src="assets/app.js?v=20261124-vocab-guide"></script><script>
+(()=>{
+const app=document.querySelector('#app'), dialog=document.createElement('dialog');
+dialog.id='jukebox-preview'; dialog.style.cssText='width:min(760px,95vw);max-height:90vh;overflow:auto;border:1px solid #d8dfd5;border-radius:20px;padding:22px;background:#fffdf7;color:#263d32';
+document.body.append(dialog);
+const data=window.KSS_DATA||{};
+const sources=[['공장 한국어','factory','episodes','song'],['다시, 봄 OST','dasibom','songs','ost']];
+const groups=sources.map(([label,file,list,key])=>({label,tracks:(data[`data/${file}.json`]?.[list]||[]).flatMap(x=>['en','vn'].flatMap(lang=>{const id=x.youtube?.[key]?.[lang];return /^[\w-]{11}$/.test(id||'')?[{id,lang,label,title:x.title?.[lang]||x.title?.ko||String(x.no)}]:[]}))}));
+const catalog=groups.flatMap(g=>g.tracks);
+let saved=[];try{saved=JSON.parse(localStorage.getItem('kss-jukebox-preview')||'[]');if(!Array.isArray(saved))saved=[]}catch{}
+let group=0, lang='en', queue=[], at=0, player=null, view='catalog', playing=false;
+const labels=()=>({ko:['노래 듣기','전체 듣기','내 재생목록','지금 듣기','닫기'],en:['Song Play','Play all','My playlist','Play now','Close'],vn:['Nghe nhạc','Phát tất cả','Danh sách của tôi','Phát ngay','Đóng']}[document.querySelector('#lang')?.value]||['노래 듣기','전체 듣기','내 재생목록','지금 듣기','닫기']);
+const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text)n.textContent=text;if(cls)n.className=cls;return n};
+const btn=(text,fn)=>{const b=el('button',text,'btn small');b.type='button';b.onclick=fn;return b};
+const title=el('h2'), mode=el('div',null,'row'), controls=el('div',null,'row'), playerBox=el('div'), status=el('p'), list=el('ol'); status.setAttribute('aria-live','polite');
+const bar=el('div',null,'row');bar.style.justifyContent='space-between';bar.append(title,btn('×',()=>dialog.close()));bar.lastChild.setAttribute('aria-label','Close');
+dialog.append(bar,mode,controls,playerBox,status,list);
+const filtered=()=>groups[group].tracks.filter(t=>t.lang===lang);
+const mine=()=>saved.map(id=>catalog.find(t=>t.id===id)).filter(Boolean);
+const save=()=>{try{localStorage.setItem('kss-jukebox-preview',JSON.stringify(saved))}catch{} render()};
+let ytReady;
+function api(){if(window.YT?.Player)return Promise.resolve(window.YT);return ytReady??=new Promise((resolve,reject)=>{window.onYouTubeIframeAPIReady=()=>resolve(window.YT);const s=el('script');s.src='https://www.youtube.com/iframe_api';s.onerror=reject;document.head.append(s);setTimeout(()=>reject(new Error('YouTube timeout')),12000)})}
+function fallback(t){const a=el('a','YouTube에서 듣기');a.href='https://www.youtube.com/watch?v='+t.id;a.target='_blank';a.rel='noopener';status.replaceChildren(document.createTextNode(t.title+' · '),a)}
+async function spin(){const t=queue[at]; if(!t)return; playing=true;fallback(t);try{const Y=await api();if(!dialog.open||queue[at]!==t)return;if(player?.loadVideoById){player.loadVideoById(t.id);return} const host=el('div');playerBox.replaceChildren(host);player=new Y.Player(host,{width:'100%',height:Math.max(220,Math.min(380,Math.round(innerWidth*.51))),videoId:t.id,playerVars:{playsinline:1,...(location.protocol.startsWith('http')?{origin:location.origin}:{})},events:{onReady:e=>{if(dialog.open&&playing&&queue[at])e.target.loadVideoById(queue[at].id)},onStateChange:e=>{if(e.data===Y.PlayerState.ENDED&&at+1<queue.length){at++;spin()}},onError:()=>{const current=queue[at];if(current){fallback(current);status.prepend('사이트 안에서 재생할 수 없습니다. ')}}}})}catch{status.prepend('플레이어를 열 수 없습니다. ')}}
+function play(tracks){if(!tracks.length)return;queue=tracks;at=0;spin()}
+function render(){const l=labels();title.textContent=l[0]; mode.replaceChildren();controls.replaceChildren();list.replaceChildren();
+const select=el('select');select.setAttribute('aria-label','작품');groups.forEach((g,i)=>select.add(new Option(g.label,i)));select.value=group;select.onchange=()=>{group=+select.value;view='catalog';render()};
+const languages=el('select');languages.setAttribute('aria-label','노래 언어');languages.add(new Option('English','en'));languages.add(new Option('Tiếng Việt','vn'));languages.value=lang;languages.onchange=()=>{lang=languages.value;view='catalog';render()};
+mode.append(select,languages,btn(l[2]+' ('+saved.length+')',()=>{view=view==='mine'?'catalog':'mine';render()})); const tracks=view==='mine'?mine():filtered();
+const playAll=btn(view==='mine'?l[2]+' ▶':l[1]+' ▶',()=>play(tracks));playAll.disabled=!tracks.length;
+controls.append(playAll,btn('‹',()=>{if(at>0){at--;spin()}}),btn('›',()=>{if(at+1<queue.length){at++;spin()}}));
+if(!tracks.length)list.append(el('li',view==='mine'?'아직 저장한 노래가 없어요.':'재생할 노래가 없어요.'));
+tracks.forEach((t,i)=>{const li=el('li');li.style.margin='9px 0';li.append(el('span',t.title+' · '+(t.lang==='en'?'EN':'VN')+' '),btn(l[3],()=>play([t])));if(view==='mine'){li.append(btn('↑',()=>{if(i>0){[saved[i],saved[i-1]]=[saved[i-1],saved[i]];save()}}),btn('↓',()=>{if(i+1<saved.length){[saved[i],saved[i+1]]=[saved[i+1],saved[i]];save()}}),btn('−',()=>{saved=saved.filter(id=>id!==t.id);save()}))}else{const b=btn(saved.includes(t.id)?'✓':'+',()=>{if(!saved.includes(t.id)){saved.push(t.id);save()}});b.setAttribute('aria-label','내 재생목록에 추가: '+t.title);b.disabled=saved.includes(t.id);li.append(b)}list.append(li)})}
+dialog.addEventListener('close',()=>{playing=false;player?.pauseVideo?.()});
+function mount(){const youtube=app.querySelector('.ytbtn'); if(youtube&&!app.querySelector('[data-jukebox-preview]')){const b=btn('♫ '+labels()[0],()=>{render();dialog.showModal()});b.dataset.jukeboxPreview='';youtube.after(b)}}
+new MutationObserver(mount).observe(app,{childList:true,subtree:true});mount();
+})();
+</script></body></html>
